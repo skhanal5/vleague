@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="500px" src="https://user-images.githubusercontent.com/74752121/103804512-3eefa380-5020-11eb-826c-030fb547f925.png">
+  <img width="500px" src="https://user-images.githubusercontent.com/74752121/107126680-38528700-687f-11eb-8a01-d58fd41c4eb2.png">
 </p>
 
 # VLEAGUE
