@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <DialogPane layoutX="7.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="387.0" style="-fx-background-color: #f1f1f1;">
+         <header>
+            <HBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="387.0">
+               <children>
+                  <Label onMouseClicked="#closeRegisterWindow" styleClass="sign-up-close" stylesheets="@application.css">
+                     <graphic>
+                        <FontIcon iconLiteral="fa-close" />
+                     </graphic>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="20.0" top="10.0" />
+               </padding>
+            </HBox>
+         </header>
+         <content>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="387.0">
+               <children>
+                  <Pane fx:id="signUpPane" layoutX="53.0" layoutY="40.0" prefWidth="281.0">
+                     <children>
+                        <Label fx:id="registrationInvalidLabel" layoutX="1.0" layoutY="40.0" textFill="#fa4454" />
+                        <Label fx:id="specialCharLabel" layoutX="1.0" layoutY="40.0" textFill="#fa4454" />
+                        <Label fx:id="signUp" layoutX="107.0" text="Sign up">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="registerUsernameField" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onEnterPressed" prefHeight="48.0" prefWidth="281.0" promptText="Username" styleClass="sign-up-text-field" stylesheets="@application.css">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="registerEmailField" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onEnterPressed" prefHeight="48.0" prefWidth="281.0" promptText="Email Address" styleClass="sign-up-text-field" stylesheets="@application.css">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="plaintextField" layoutY="184.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="281.0" styleClass="sign-up-text-field" stylesheets="@application.css" visible="false">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TextField>
+                        <PasswordField fx:id="registerPasswordField" layoutY="184.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onEnterPressed" prefHeight="48.0" prefWidth="281.0" promptText="Password" styleClass="sign-up-text-field" stylesheets="@application.css">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </PasswordField>
+                        <Label fx:id="haveAccount" layoutX="47.0" layoutY="356.0" onMouseClicked="#closeRegisterWindow" styleClass="have-account-label" stylesheets="@application.css" text="Already have an account? Sign in" textFill="#949494">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="registerButton" focusTraversable="false" layoutX="111.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#createAccount" prefHeight="54.0" prefWidth="58.0" styleClass="register-button" stylesheets="@application.css">
+                           <graphic>
+                              <FontIcon focusTraversable="true" iconColor="WHITE" iconLiteral="fa-arrow-right" iconSize="34" styleClass="register-button" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label focusTraversable="false" layoutX="252.0" layoutY="198.0" stylesheets="@application.css">
+                           <graphic>
+                              <FontIcon fx:id="eyeIcon" iconColor="#525252" iconLiteral="fa-eye-slash" iconSize="16" onMouseClicked="#revealPassword" styleClass="eye-icon" visible="false" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="successPane" layoutX="53.0" layoutY="40.0" prefHeight="373.0" prefWidth="281.0" visible="false">
+                     <children>
+                        <Label fx:id="welcomeMessage" layoutY="39.0" prefHeight="89.0" prefWidth="300.0" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="55.0" layoutY="1.0" style="-fx-text-fill: #fa4454;" text="Registration Complete">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="111.0" layoutY="282.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#closeRegisterWindow" prefHeight="54.0" prefWidth="58.0" styleClass="redirect-button" stylesheets="@application.css">
+                           <graphic>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-arrow-right" iconSize="34" styleClass="register-button" />
+                           </graphic>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="loadingPane" layoutX="53.0" layoutY="40.0" prefHeight="373.0" prefWidth="281.0" visible="false">
+                     <children>
+                        <Circle fill="TRANSPARENT" layoutX="140.0" layoutY="147.0" radius="36.0" stroke="#fa4554" strokeWidth="3.0" />
+                        <Circle fx:id="loadingCircle" fill="TRANSPARENT" layoutX="140.0" layoutY="147.0" radius="36.0" stroke="#c7c7c7" strokeWidth="3.3" style="-fx-stroke-dash-array: 170;" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </content>
+         <effect>
+            <DropShadow />
+         </effect>
+      </DialogPane>
+   </children>
+</AnchorPane>

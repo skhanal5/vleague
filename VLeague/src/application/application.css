@@ -1,0 +1,452 @@
+@font-face{
+	font-weight:Regular;
+ 	src: url("DINPro-Bold_13934.ttf");
+}
+
+@font-face{
+	src: url("Tungsten-Bold.ttf");
+}
+
+.sign-in-text-field{
+	-fx-prompt-text-fill: #e3e0db;
+	-fx-text-fill:#e3e0db;
+	-fx-background-color:#131b25;
+	-fx-background-radius: 4.0 4.0 4.0 4.0;
+	-fx-border-color:#c6c6c6;
+	-fx-border-width: 0.0px 0.0px 2.0px 0.0px; 
+}
+
+.sign-in-text-field:focused{
+	-fx-border-width: 2.0px 2.0px 2.0px 2.0px; 
+	-fx-border-radius: 6.0 6.0 6.0 6.0;
+	-fx-border-color:#c6c6c6;
+	-fx-background-radius: 10.0 10.0 10.0 10.0;
+	-fx-background-color:#131b25;
+}
+
+.sign-in-text-field:hover{
+	-fx-background-color:#1b2734;
+	-fx-border-color:transparent;
+	-fx-border-color:#c6c6c6;
+	-fx-border-width: 0.0px 0.0px 2.0px 0.0px; 
+}
+
+.sign-in-text-field:focused:hover{
+	-fx-border-width: 2.0px 2.0px 2.0px 2.0px; 
+	-fx-background-color:#131b25;
+	-fx-border-color:#c6c6c6;
+}
+
+.hyperlinks, .hyperlinks:active{
+	-fx-border-color:transparent;
+	-fx-underline: false;
+	-fx-text-fill: #1b2734;
+}
+
+.hyperlinks:hover{
+	-fx-text-fill:#293c51;
+	-fx-underline: false;
+}
+
+.jfx-check-box:selected{
+    -fx-text-fill: #293c51;
+}
+
+.jfx-check-box:hover .box{
+    -fx-cursor:hand;
+}
+
+.login-button{
+	-fx-background-color:#fa4454;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.login-button:hover{
+	-fx-background-color:#fb5261;
+	-fx-cursor:hand;
+}
+
+.login-button:disabled, .login-button:disabled > * {
+	-fx-background-color:#1b2633;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.login-icon:disabled, .login-icon:disabled > * {
+	-fx-icon-color:#1b2633;
+}
+
+.sign-in-x-button{
+	-fx-background-color:transparent;
+}
+
+.sign-in-x-button:hover{
+	-fx-background-color:#fa4454;
+	-fx-cursor:hand;
+}
+
+.sign-in-top-button{
+	-fx-background-color:transparent;
+}
+
+.sign-in-top-button:hover{
+	-fx-background-color:#1b2734;
+	-fx-cursor:hand;
+}
+
+.sign-up-text-field{
+	-fx-prompt-text-fill: #949494;
+	-fx-text-fill:#000000;
+	-fx-background-color:#e6e6e6;
+	-fx-border-color:#525252;
+	-fx-border-width: 0.0px 0.0px 2.0px 0.0px; 
+}
+
+.sign-up-text-field:focused{
+	-fx-border-width: 2.0px 2.0px 2.0px 2.0px; 
+	-fx-border-radius: 6.0 6.0 6.0 6.0;
+	-fx-border-color:#525252;
+	-fx-background-color:#e6e6e6;
+}
+
+.sign-up-text-field:hover{
+	-fx-background-color:#dcdada;
+	-fx-border-color:transparent;
+	-fx-border-color:#525252;
+	-fx-border-width: 0.0px 0.0px 2.0px 0.0px; 
+}
+
+.sign-up-text-field:focused:hover{
+	-fx-background-color:#e6e6e6;
+	-fx-border-width: 2.0px 2.0px 2.0px 2.0px; 
+	-fx-border-color:#525252;
+}
+
+.sign-up-close:hover{
+	-fx-cursor:hand;
+}
+
+.have-account-label:hover{
+	-fx-text-fill:#b3b1b1;
+	-fx-cursor:hand;
+}
+
+.register-button{
+	-fx-background-color:#fa4454;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.register-button:disabled, .register-button:disabled > * {
+	-fx-background-color:#f1f1f1;
+	-fx-background-radius: 10 10 10 10;
+}
+
+.register-button:hover{
+	-fx-background-color:#fb5261;
+	-fx-cursor:hand;
+}
+
+.redirect-button{
+	-fx-background-color:#131b25;
+}
+
+.redirect-button:hover{
+	-fx-background-color:#1b2734;
+	-fx-cursor:hand;
+}
+
+.eye-icon:hover{
+	-fx-cursor:hand;
+}
+
+.tab.headers-region {
+   	-fx-background-color:#131b25;
+   	-fx-border-color:white;
+   	-fx-border-width:0 0 2.5 0;
+}
+.tab-header-background {
+    -fx-background-color:#131b25;
+    -fx-border-color:rgba(255,255,255,.1);
+   	-fx-border-width:0 0 1 0;
+}
+
+.tab{	
+	-fx-pref-width: 120px;
+	-fx-pref-height: 60px;
+	-fx-background-color:#131b25;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab .tab-label{
+	-fx-pref-width: 100; 
+    -fx-alignment: center;
+    -fx-font-family: "System";
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-text-base-color:#c7c7c7;
+    -fx-effect: dropshadow( three-pass-box , black , 8 , 0.0 , 2 , 0 )
+}
+
+.tab-pane:top *.tab-header-area{
+	-fx-padding: 0.0em 0.166667em 0.0em 0.0em;
+}
+
+.tab:hover{
+	-fx-background-color:#1b2734;
+}
+
+.tab:hover .tab-label{
+	-fx-text-base-color:#c7c7c7
+}
+
+.tab:selected:hover{
+	-fx-background-color:#1b2734;
+}
+
+.tab:selected{
+	-fx-background-color:#1b2734;
+	-fx-border-color: #fa4454;
+	-fx-border-width: 0.0px 0.0px 2.5px 0.0px; 
+}
+
+.tab:selected .tab-label{
+	-fx-text-base-color:#FFFFFF;
+}
+
+.tab:disabled:hover{
+	-fx-background-color:#131b25;
+}
+
+.tab:disabled{
+	-fx-background-color:#131b25;
+}
+
+.scroll-bar:vertical {
+	-fx-background-color:#131b25;
+	-fx-pref-width: 25px;
+    -fx-padding: 3;
+}
+
+.scroll-bar:vertical .track{
+	-fx-background-color:#131b25;
+}
+
+.scroll-bar:vertical .thumb{
+	-fx-background-color:#1b2734;
+}
+
+.scroll-bar:vertical .thumb:hover{
+	-fx-background-color:#293c51;
+}
+
+.scroll-bar:vertical *.increment-arrow,
+.scroll-bar:vertical *.decrement-arrow{
+	-fx-background-color:#9c9d9e;
+}
+
+.scroll-bar:vertical *.increment-button:hover,
+.scroll-bar:vertical *.decrement-button:hover{
+	-fx-background-color:#131b25;
+}
+
+.scroll-bar:horizontal {
+	-fx-background-color:#232b37;
+	-fx-pref-height: 20px;
+}
+
+.scroll-bar:horizontal .track{
+	-fx-background-color:#232b37;
+}
+
+.scroll-bar:horizontal .thumb{
+	-fx-background-color:#323b45;
+}
+
+.scroll-bar:horizontal .thumb:hover{
+	-fx-background-color:#131b25;
+}
+
+.scroll-bar:horizontal *.increment-arrow,
+.scroll-bar:horizontal *.decrement-arrow{
+	-fx-background-color:#9c9d9e;
+}
+
+.scroll-bar:horizontal *.increment-button,
+.scroll-bar:horizontal *.decrement-button{
+	-fx-background-color:#323b45;
+	-fx-pref-width: 25px;
+	-fx-pref-height: 25px;
+	-fx-background-insets: 0px;
+}
+
+.scroll-bar:horizontal *.increment-button:hover,
+.scroll-bar:horizontal *.decrement-button:hover{
+	-fx-background-color:#131b25;
+}
+
+#MyTeamTabPane .tab{	
+	-fx-pref-width: 120px;
+	-fx-pref-height: 120px;
+}
+
+#MyTeamTabPane .tab:selected{
+	-fx-background-color:#1b2734;
+	-fx-border-color: #c7c7c7;
+	-fx-border-width: 0.0px 0.0px 2.5px 0.0px; 
+}
+
+#MyTeamTabPane .tab:hover{
+	-fx-background-color:#1b2734;
+}
+
+.patchnotes-panel:hover{
+	-fx-opacity:.80;
+	-fx-cursor:hand;
+}
+
+.slideshow-text{
+	-fx-font-family:"Tungsten Bold";	
+	-fx-font-size:24;
+}
+
+.slideshow-panel:hover{
+	-fx-opacity:.80;
+	-fx-font-family:"Tungsten Bold";	
+	-fx-font-size:24;
+}
+
+.profile-panels:hover{
+	-fx-background-color: rgba(14,19,26,.2);
+}
+
+.profile-edit-icon:hover{
+	-fx-cursor:hand;
+}
+
+.profile-back-text:hover{
+	-fx-font-size:17;
+	-fx-font-weight:bold;
+	-fx-cursor:hand;
+}
+
+.refresh-text:hover{
+	-fx-cursor:hand;
+}
+
+.refresh-icon:hover{
+	-fx-cursor:hand;
+}
+
+.loading-animation{
+	-fx-progress-color: #fa4454;
+}
+
+.patchnotes-label{
+	-fx-font-family:"Tungsten Bold";
+	-fx-font-size:36;
+}
+
+.profile-label{
+	-fx-font-family:"Tungsten Bold";
+	-fx-font-size:54;
+}
+
+.header-label{
+	-fx-font-family:"Tungsten Bold";
+	-fx-font-size:62;
+}
+
+.settings-panels:hover{
+	-fx-background-color:#dcdada;
+	-fx-cursor:hand;
+}
+
+.audio-settings:hover{
+	-fx-background-color:#dcdada;
+}
+
+.audio-sliders>.thumb{
+	-fx-background-color: #989898;
+}
+
+.audio-sliders > .colored-track {
+     -fx-background-color: #fa4554;
+}
+
+.audio-sliders > .track {
+     -fx-background-color: #949494;
+}
+
+.audio-sliders > .animated-thumb {
+     -fx-background-color: #fa4554;
+}
+
+.light-switch-icons:hover{
+	-fx-cursor:hand;
+}
+
+.team-icon{
+	-fx-border-width:1.5;
+	-fx-border-color: rgba(255,255,255,.2);
+	-fx-background-color: rgba(255,255,255,.05);
+	-fx-opacity:.75;
+}
+
+.team-icon:hover{
+	-fx-cursor:hand;
+	-fx-background-color: rgba(255,255,255,.1);
+	-fx-border-color: rgba(255,255,255,.5);
+	-fx-opacity:1;
+}
+
+.team-icon:focused{
+	-fx-background-color: rgba(255,255,255,.1);
+	-fx-border-color: rgba(255,255,255,.8);
+	-fx-opacity:1;
+}
+
+#team-label {
+	-fx-font-family:"DINPro-Bold";
+	-fx-font-size:18;
+}
+
+.player-icon{
+	-fx-border-width:1.5;
+	-fx-border-color: rgba(255,255,255,.2);
+	-fx-background-color: rgba(255,255,255,.05);
+}
+
+.player-icon:hover{
+	-fx-background-color: rgba(255,255,255,.1);
+	-fx-border-color: rgba(255,255,255,.5);
+}
+
+.player-text{
+	-fx-font-family:"DINPro-Bold";
+	-fx-font-size:14;
+}
+
+#lock-in-button{
+	-fx-background-radius:0;
+	-fx-font-family:"DINPro-Bold";
+	-fx-font-size:12;
+	-fx-border-width:1;
+	-fx-border-color: rgba(255,255,255,.2);
+	-fx-background-color: #ca5c65;
+	-fx-opacity:1;
+}
+
+#lock-in-button:disabled{
+	-fx-background-radius:0;
+	-fx-font-family:"DINPro-Bold";
+	-fx-font-size:12;
+	-fx-border-width:1;
+	-fx-border-color: rgba(255,255,255,.2);
+	-fx-background-color: #ca5c65;
+	-fx-opacity:.1;
+}
+
+#lock-in-button:hover{
+	-fx-background-color:#e06771;
+	-fx-cursor:hand;
+}

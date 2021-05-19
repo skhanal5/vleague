@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
+   <children>
+      <TabPane fx:id="tabpane" prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab closable="false" disable="true">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab closable="false" disable="true">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          <Tab fx:id="homeTab" closable="false" text="Home">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1079.0">
+                     <children>
+                        <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="-51.0" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                           <image>
+                              <Image url="@../../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="720.0" fitWidth="1281.0" layoutX="-1.0" layoutY="-59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/VLEAGUE%20Assets/info-panel-blur.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
+                           </image>
+                        </ImageView>
+                        <Pane fx:id="homePane1" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-border-width: 2;" styleClass="slideshow-panel">
+                           <children>
+                              <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
+                              <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/VLEAGUE%20Assets/slide1.png" />
+                                 </image>
+                              </ImageView>
+                              <Rectangle fill="#fa4655" height="4.0" layoutX="32.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle fill="WHITE" height="4.0" layoutX="101.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: rgba(255,255,255,.15);" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle height="4.0" layoutX="173.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: rgba(255,255,255,.15);" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="53.0" layoutY="4.0" styleClass="slideshow-text" text="WELCOME TO VLEAGUE!" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children></Pane>
+                        <Pane fx:id="homePane2" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-border-width: 2;" styleClass="slideshow-panel" visible="false">
+                           <children>
+                              <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
+                              <Rectangle fill="#ffffff26" height="4.0" layoutX="32.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle fill="#fa4655" height="4.0" layoutX="101.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle fill="#ffffff26" height="4.0" layoutX="173.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/VLEAGUE%20Assets/slide2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="67.0" layoutY="4.0" styleClass="slideshow-text" text="CLIMB THE RANKS" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="homePane3" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-border-width: 2;" styleClass="slideshow-panel" visible="false">
+                           <children>
+                              <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../resources/VLEAGUE%20Assets/slide3.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
+                              <Rectangle fill="#ffffff26" height="4.0" layoutX="32.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle fill="WHITE" height="4.0" layoutX="101.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-fill: rgba(255,255,255,.15);" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle fill="#fa4554" height="4.0" layoutX="173.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Label layoutX="51.0" layoutY="4.0" styleClass="slideshow-text" text="EARN VLEAGUE POINTS" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="956.0" layoutY="382.0" onMouseClicked="#onPatchNotesSelect" prefHeight="54.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-background-color: rgba(0,0,0,.3); -fx-border-width: 1.5;" styleClass="patchnotes-panel">
+                           <children>
+                              <Label layoutX="59.0" layoutY="8.0" minHeight="-Infinity" minWidth="-Infinity" styleClass="patchnotes-label" text="PATCH NOTES" textFill="WHITE" />
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-right" layoutX="31.0" layoutY="31.0" />
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-left" layoutX="216.0" layoutY="31.0" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="myTeamTab" closable="false" text="MyTeam">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0f1923;">
+                     <children>
+                        <AnchorPane fx:id="myTeamSelect" layoutX="-432.0" layoutY="-381.0">
+                           <children>
+                              <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="381.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true" styleClass="pagination" visible="false">
+                                 <image>
+                                    <Image url="@../../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
+                                 </image>
+                                 <effect>
+                                    <BoxBlur height="255.0" iterations="3" width="255.0" />
+                                 </effect>
+                              </ImageView>
+                              <Label layoutX="959.0" layoutY="426.0" styleClass="header-label" text="TEAM SELECT" textFill="WHITE" />
+                              <HBox layoutX="762.0" layoutY="829.0" prefHeight="75.0" prefWidth="620.0" spacing="3.0">
+                                 <children>
+                                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onTSMSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/tsm-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#on100TSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/100t-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="88.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onC9Select" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/c9-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="166.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSentinelsSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/sen-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="244.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onFazeSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/faze-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="322.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onGenGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/geng-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="400.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onEnvySelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/envy-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="400.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onLGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/lg-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="762.0" layoutY="907.0" prefHeight="75.0" prefWidth="620.0" spacing="3.0">
+                                 <children>
+                                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onXSETSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/xset-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onNRGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/nrg-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="88.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onT1Select" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/t1-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="166.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onDigSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/dig-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="244.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSSGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/spacestation-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="322.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onEquinoxSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/equinox-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="400.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBBGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/bbg-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="478.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onIMTSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/imt-logo.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <VBox layoutX="534.0" layoutY="496.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="60.0" spacing="3.0">
+                                 <children>
+                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="10.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                       <graphic>
+                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="playerOne" layoutX="618.0" layoutY="517.0" styleClass="player-text" text="Player 1" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerTwo" layoutX="618.0" layoutY="578.0" styleClass="player-text" text="Player 2" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerThree" layoutX="618.0" layoutY="638.0" styleClass="player-text" text="Player 3" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerFour" layoutX="618.0" layoutY="699.0" styleClass="player-text" text="Player 4" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="playerFive" layoutX="618.0" layoutY="760.0" styleClass="player-text" text="Player 5" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label id="team-label" fx:id="teamNameLabel" alignment="CENTER" layoutX="935.0" layoutY="787.0" prefHeight="27.0" prefWidth="278.0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="948.0" layoutY="515.0" prefHeight="250.0" prefWidth="250.0" styleClass="player-icon">
+                                 <graphic>
+                                    <ImageView fx:id="teamIconPreview" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
+                                 </graphic>
+                              </Label>
+                              <Button id="lock-in-button" fx:id="lockIn" disable="true" layoutX="1308.0" layoutY="787.0" mnemonicParsing="false" onMouseClicked="#onLockInSelect" prefHeight="25.0" prefWidth="75.0" text="LOCK IN" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="myTeamLoad" prefHeight="660.0" prefWidth="1280.0" visible="false">
+                           <children>
+                              <Circle fill="TRANSPARENT" layoutX="640.0" layoutY="291.0" radius="36.0" stroke="#fa4554" strokeWidth="3.0" />
+                              <Circle fx:id="teamLoadCircle" fill="TRANSPARENT" layoutX="640.0" layoutY="291.0" radius="36.0" stroke="#131b25" strokeWidth="5.0" style="-fx-stroke-dash-array: 170;" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="myTeamPane" prefHeight="661.0" prefWidth="1280.0" visible="false">
+                           <children>
+                              <Label fx:id="myTeamHeader" alignment="CENTER" layoutX="430.0" layoutY="45.0" prefHeight="70.0" prefWidth="421.0" styleClass="header-label" textFill="WHITE" />
+                              <HBox layoutX="120.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="1041.0" spacing="10.0">
+                                 <children>
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                       <children>
+                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                       </children></Pane>
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                       <children>
+                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                       </children></Pane>
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                       <children>
+                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                       </children></Pane>
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                       <children>
+                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                       </children></Pane>
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                       <children>
+                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                       </children></Pane>
+                                 </children>
+                              </HBox>
+                           </children></AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="scheduleTab" closable="false" text="Schedule">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <AnchorPane prefHeight="1211.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
+                                 <children>
+                                    <Label layoutX="479.0" layoutY="45.0" styleClass="header-label" text="2021 SEASON OVERVIEW" textFill="WHITE" />
+                                 </children></AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="resultsTab" closable="false" text="Results">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1003.0">
+                     <children>
+                        <ScrollPane fx:id="resultsScroll" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <AnchorPane onScroll="#onStreamScrolling" prefHeight="1211.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
+                                 <children>
+                                    <Label layoutX="559.0" layoutY="45.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
+                                 </children></AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="globalTab" closable="false" text="Global">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1261.0">
+                     <children>
+                        <ScrollPane fx:id="leaderboardScroll" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS">
+                           <content>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onScroll="#onLeaderboardScrolling" prefHeight="1211.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
+                                 <children>
+                                    <Pane fx:id="leaderboardPane" layoutX="320.0" layoutY="150.0" prefHeight="980.0" prefWidth="748.0" style="-fx-background-radius: 15; -fx-background-color: #1b2734; -fx-border-color: rgba(255,255,255,.01); -fx-border-radius: 15 15 15 15;">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" prefHeight="980.0" prefWidth="748.0">
+                                             <children>
+                                                <Pane prefHeight="69.0" prefWidth="748.0" style="-fx-background-color: #fa4454; -fx-background-radius: 15 15 0 0; -fx-border-color: rgba(255,255,255,.1); -fx-border-radius: 15 15 0 0;" styleClass="profile-panels">
+                                                   <children>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontIcon iconColor="#d8c36a" iconLiteral="fa-trophy" iconSize="26" layoutX="35.0" layoutY="45.0" text="">
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </FontIcon>
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/jett-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontIcon iconColor="#d8d9db" iconLiteral="fa-trophy" iconSize="26" layoutX="35.0" layoutY="45.0" text="">
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </FontIcon>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="79.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/raze-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <FontIcon iconColor="#bc9463" iconLiteral="fa-trophy" iconSize="26" layoutX="35.0" layoutY="45.0" text="">
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </FontIcon>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="148.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="4" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/omen-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="217.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="5" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/skye-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="286.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="6" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/sage-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="355.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="7" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/sova-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="424.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="8" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/jett-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="493.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="9" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/killjoy-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="562.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="10" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/phoenix-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="631.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="11" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/brim-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="700.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="12" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/skye-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="712.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="13" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/killjoy-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="718.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="14" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="858.0" prefHeight="69.0" prefWidth="748.0" style="-fx-background-radius: 0 0 15 15;" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
+                                                         <graphic>
+                                                            <Label text="15" textFill="#c7c7c7">
+                                                               <font>
+                                                                  <Font name="System Bold" size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </graphic>
+                                                      </Label>
+                                                      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/reyna-small-icon.png" />
+                                                         </image>
+                                                         <effect>
+                                                            <DropShadow />
+                                                         </effect>
+                                                      </ImageView>
+                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Pane>
+                                    <Pane fx:id="leaderboardLoad" layoutX="320.0" layoutY="150.0" prefHeight="980.0" prefWidth="748.0" style="-fx-background-radius: 15; -fx-background-color: #1b2734; -fx-border-color: rgba(255,255,255,.01); -fx-border-radius: 15 15 15 15;" visible="false">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <children>
+                                          <Circle fill="TRANSPARENT" layoutX="374.0" layoutY="259.0" radius="36.0" stroke="#fa4554" strokeWidth="3.0" />
+                                          <Circle fx:id="leaderLoadCircle" fill="TRANSPARENT" layoutX="374.0" layoutY="259.0" radius="36.0" stroke="#131b25" strokeWidth="5.0" style="-fx-stroke-dash-array: 170;" />
+                                       </children>
+                                    </Pane>
+                                    <Group layoutX="337.0" layoutY="131.0" onMouseClicked="#onRefreshSelect">
+                                       <children>
+                                          <FontIcon fx:id="refreshIcon" iconColor="#c7c7c780" iconLiteral="fa-refresh" iconSize="9" layoutY="10.0" styleClass="refresh-icon" text="" wrappingWidth="40.0" />
+                                          <Label fx:id="refreshLabel" layoutX="14.0" layoutY="-1.0" styleClass="refresh-text" text="REFRESH" textFill="#c7c7c77e">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Group>
+                                    <Label alignment="CENTER" layoutX="561.0" layoutY="45.0" prefHeight="53.0" prefWidth="267.0" styleClass="header-label" text="LEADERBOARD" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="915.0" layoutY="131.0" text="LAST UPDATED:" textFill="#c7c7c77d">
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="timeStamp" layoutX="997.0" layoutY="131.0" prefHeight="15.0" prefWidth="60.0" textFill="#c7c7c77d">
+                                       <font>
+                                          <Font name="System Bold" size="10.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content></ScrollPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="profileTab" closable="false" text="Profile">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="983.0">
+                     <children>
+                        <AnchorPane fx:id="profileScreen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1280.0">
+                           <children>
+                              <Pane layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to top, #f3606d,  #fa4454);">
+                                 <children>
+                                    <Label layoutX="521.0" layoutY="45.0" styleClass="header-label" text="USER PROFILE" textFill="WHITE" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="-4.0" layoutY="245.0" prefHeight="463.0" prefWidth="1288.0" style="-fx-background-color: #0f1923; -fx-background-radius: 40;">
+                                 <children>
+                                    <Label fx:id="profileUsername" layoutX="208.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="93.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Pane layoutX="144.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="1000.0" style="-fx-background-color: #17212d; -fx-background-radius: 2; -fx-border-color: rgba(255,255,255, .1); -fx-border-radius: 2;">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1000.0">
+                                             <children>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 2 0 0 2;" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label layoutX="48.0" layoutY="40.0" text="Matches Played" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="matchesPlayed" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="144.0" textFill="#fa4454">
+                                                         <font>
+                                                            <Font name="Arial Bold" size="64.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Line endX="7.0" endY="109.5" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
+                                                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label layoutX="66.0" layoutY="40.0" text="VP Earned" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="vpEarned" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="144.0" textFill="#fa4454">
+                                                         <font>
+                                                            <Font name="Arial Bold" size="64.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Line endX="7.0" endY="109.5" layoutX="803.0" layoutY="33.0" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
+                                                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label layoutX="60.0" layoutY="40.0" text="Global Rank" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="globalRank" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="144.0" textFill="#fa4454">
+                                                         <font>
+                                                            <Font name="Arial Bold" size="64.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Line endX="7.0" endY="109.5" layoutX="404.0" layoutY="33.0" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
+                                                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label layoutX="49.0" layoutY="40.0" text="Top 15 Finishes" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="topFinishes" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="144.0" textFill="#fa4454">
+                                                         <font>
+                                                            <Font name="Arial Bold" size="64.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Line endX="7.0" endY="109.5" layoutX="604.0" layoutY="49.0" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
+                                                <Pane layoutX="810.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0 2 2 0;" styleClass="profile-panels">
+                                                   <children>
+                                                      <Label layoutX="53.0" layoutY="40.0" text="Favorite Team" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="favTeam" alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="144.0" textFill="#fa4454">
+                                                         <font>
+                                                            <Font name="Arial Bold" size="64.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <effect>
+                                          <DropShadow height="5.0" radius="2.0" width="5.0" />
+                                       </effect>
+                                    </Pane>
+                                    <HBox alignment="CENTER" layoutX="841.0" layoutY="13.0" spacing="15.0">
+                                       <children>
+                                          <FontIcon iconColor="#d8c36a" iconLiteral="fa-trophy" iconSize="26" />
+                                          <Label fx:id="goldTrophy" alignment="CENTER" prefHeight="25.0" prefWidth="45.0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <FontIcon iconColor="#d8d9db" iconLiteral="fa-trophy" iconSize="26" />
+                                          <Label fx:id="silverTrophy" alignment="CENTER" prefHeight="25.0" prefWidth="45.0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <FontIcon iconColor="#bc9463" iconLiteral="fa-trophy" iconSize="26" />
+                                          <Label fx:id="bronzeTrophy" alignment="CENTER" prefHeight="25.0" prefWidth="45.0" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </HBox>
+                                    <Label layoutX="168.0" layoutY="17.0" text="User:" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label layoutX="343.0" layoutY="17.0" text="Joined:" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <FontIcon iconColor="#c7c7c7" iconLiteral="fa-calendar" iconSize="16" layoutX="318.0" layoutY="31.0" text="">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></FontIcon>
+                                    <FontIcon iconColor="#c7c7c7" iconLiteral="fa-user-circle" iconSize="16" layoutX="144.0" layoutY="31.0" text="">
+                                       <effect>
+                                          <DropShadow />
+                                       </effect></FontIcon>
+                                    <Label fx:id="profileDateJoined" layoutX="394.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="87.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="profilePicPane" layoutX="490.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="300.0" styleClass="profile-panels">
+                                 <children>
+                                    <ImageView fx:id="largeUserIcon" fitHeight="389.0" fitWidth="335.0" layoutX="-17.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                       <image>
+                                          <Image url="@../../resources/VLEAGUE%20Assets/large%20icons/jett-large-icon.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                    <FontIcon fx:id="editProfile" iconColor="WHITE" iconLiteral="fa-edit" iconSize="15" layoutX="271.0" layoutY="27.0" onMouseClicked="#onEditProfileSelect" styleClass="profile-edit-icon" visible="false" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="profileSelectScreen" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1280.0" visible="false">
+                           <children>
+                              <Pane layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to top, #f3606d,  #fa4454);">
+                                 <children>
+                                    <Label layoutX="50.0" layoutY="14.0" onMouseClicked="#onBackArrowSelect" styleClass="profile-back-text" text="BACK" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-left" iconSize="25" layoutX="23.0" layoutY="36.0" onMouseClicked="#onBackArrowSelect" styleClass="sign-in-top-button" text="" />
+                                    <Label layoutX="532.0" layoutY="45.0" styleClass="header-label" text="ICON SELECT" textFill="WHITE" />
+                                 </children></Pane>
+                              <Pane layoutX="-4.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="1288.0" style="-fx-background-color: #0f1923; -fx-background-radius: 40;">
+                                 <children>
+                                    <ScrollPane fx:id="profileScroll" hbarPolicy="ALWAYS" hvalue="0.5" layoutX="144.0" layoutY="140.0" prefHeight="200.0" prefWidth="1000.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER" vmax="0.0">
+                                       <content>
+                                          <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="2559.0" style="-fx-background-color: #17212d;">
+                                             <children>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onViperLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/viper-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onBrimLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/brim-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCypherLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/cypher-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onKillJoyLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/killjoy-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onPhoenixLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/phoenix-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onRazeLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/raze-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onJettLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="198.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../bin/VLEAGUE%20Assets/medium%20icons/jett-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onReynaLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/reyna-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSovaLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/sova-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSkyeLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/sky-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSageLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/sage-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onOmenLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/omen-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onYoruLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/yoru-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onBreachLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                   <graphic>
+                                                      <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/breach-med-icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                       <effect>
+                                          <DropShadow color="#0000006b" height="19.27" offsetY="3.0" radius="4.3175" width="0.0" />
+                                       </effect>
+                                    </ScrollPane>
+                                    <Button id="lock-in-button" fx:id="equipIcon" layoutX="1068.0" layoutY="106.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="EQUIP" textFill="WHITE" />
+                                 </children></Pane>
+                              <Pane layoutX="490.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="300.0">
+                                 <children>
+                                    <ImageView fx:id="previewUserIcon" fitHeight="389.0" fitWidth="335.0" layoutX="-17.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../resources/VLEAGUE%20Assets/large%20icons/jett-large-icon.png" />
+                                       </image>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" disable="true">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab closable="false" disable="true">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox alignment="CENTER" layoutX="543.0" layoutY="693.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="194.0" spacing="10.0">
+         <children>
+            <Circle fx:id="homeCircle" fill="#fa4454" radius="3.5" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Circle fx:id="myTeamCircle" fill="#c7c7c7" radius="3.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="scheduleCircle" fill="#c7c7c7" radius="3.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="resultsCircle" fill="#c7c7c7" radius="3.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="globalCircle" fill="#c7c7c7" radius="3.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+            <Circle fx:id="profileCircle" fill="#c7c7c7" radius="3.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-1.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="241.0" style="-fx-background-color: #131b25;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/VLEAGUE%20Assets/VLEAGUE.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children></HBox>
+      <HBox alignment="CENTER_RIGHT" layoutX="959.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="59.0" prefWidth="321.0" style="-fx-background-color: #131b25;">
+         <children>
+            <ImageView fx:id="smallUserIcon" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="2.0" right="15.0" top="3.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label fx:id="username" prefHeight="17.0" prefWidth="120.0" textFill="#c7c7c7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="-10.0" top="3.0" />
+               </HBox.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onGearSelect" prefHeight="59.0" prefWidth="60.0" styleClass="sign-in-top-button">
+               <graphic>
+                  <FontIcon iconColor="#c7c7c7" iconLiteral="fa-gear" iconSize="16">
+                     <effect>
+                        <DropShadow />
+                     </effect></FontIcon>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
