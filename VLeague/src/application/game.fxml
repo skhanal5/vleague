@@ -54,7 +54,7 @@
                               <Image url="@../../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
                            </image>
                         </ImageView>
-                        <Pane fx:id="homePane1" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-border-width: 2;" styleClass="slideshow-panel">
+                        <Pane fx:id="homePane1" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel">
                            <children>
                               <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
@@ -83,7 +83,7 @@
                                  </font>
                               </Label>
                            </children></Pane>
-                        <Pane fx:id="homePane2" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-border-width: 2;" styleClass="slideshow-panel" visible="false">
+                        <Pane fx:id="homePane2" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel" visible="false">
                            <children>
                               <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
                               <Rectangle fill="#ffffff26" height="4.0" layoutX="32.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
@@ -113,7 +113,7 @@
                               </Label>
                            </children>
                         </Pane>
-                        <Pane fx:id="homePane3" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-border-width: 2;" styleClass="slideshow-panel" visible="false">
+                        <Pane fx:id="homePane3" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel" visible="false">
                            <children>
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -143,9 +143,9 @@
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="956.0" layoutY="382.0" onMouseClicked="#onPatchNotesSelect" prefHeight="54.0" prefWidth="255.0" style="-fx-border-color: rgba(255,255,255,.3); -fx-background-color: rgba(0,0,0,.3); -fx-border-width: 1.5;" styleClass="patchnotes-panel">
+                        <Pane layoutX="956.0" layoutY="382.0" onMouseClicked="#onPatchNotesSelect" prefHeight="54.0" prefWidth="255.0" styleClass="patchnotes-panel">
                            <children>
-                              <Label layoutX="59.0" layoutY="8.0" minHeight="-Infinity" minWidth="-Infinity" styleClass="patchnotes-label" text="PATCH NOTES" textFill="WHITE" />
+                              <Label layoutX="59.0" layoutY="7.0" minHeight="-Infinity" minWidth="-Infinity" styleClass="patchnotes-label" text="PATCH NOTES" textFill="WHITE" />
                               <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-right" layoutX="31.0" layoutY="31.0" />
                               <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-left" layoutX="216.0" layoutY="31.0" />
                            </children>
@@ -167,7 +167,7 @@
                                     <BoxBlur height="255.0" iterations="3" width="255.0" />
                                  </effect>
                               </ImageView>
-                              <Label layoutX="959.0" layoutY="426.0" styleClass="header-label" text="TEAM SELECT" textFill="WHITE" />
+                              <Label focusTraversable="false" layoutX="959.0" layoutY="426.0" styleClass="header-label" text="TEAM SELECT" textFill="WHITE" />
                               <HBox layoutX="762.0" layoutY="829.0" prefHeight="75.0" prefWidth="620.0" spacing="3.0">
                                  <children>
                                     <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onTSMSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
@@ -273,29 +273,29 @@
                                           </ImageView>
                                        </graphic>
                                     </Button>
-                                    <Button layoutX="166.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onDigSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                    <Button layoutX="166.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onV1Select" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/dig-logo.png" />
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/v1-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </Button>
-                                    <Button layoutX="244.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSSGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                    <Button layoutX="244.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onANDBOXSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/spacestation-logo.png" />
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/andbox-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </Button>
-                                    <Button layoutX="322.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onEquinoxSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
+                                    <Button layoutX="322.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onRNGSelect" prefHeight="75.0" prefWidth="75.0" styleClass="team-icon">
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/equinox-logo.png" />
+                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/rng-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -322,45 +322,45 @@
                               </HBox>
                               <VBox layoutX="534.0" layoutY="496.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="304.0" prefWidth="60.0" spacing="3.0">
                                  <children>
-                                    <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                    <Label alignment="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="playerOnePic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </Label>
-                                    <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                    <Label alignment="CENTER" focusTraversable="false" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="playerTwoPic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </Label>
-                                    <Label alignment="CENTER" layoutX="10.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                    <Label alignment="CENTER" focusTraversable="false" layoutX="10.0" layoutY="71.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="playerThreePic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </Label>
-                                    <Label alignment="CENTER" layoutX="10.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                    <Label alignment="CENTER" focusTraversable="false" layoutX="10.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="playerFourPic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </Label>
-                                    <Label alignment="CENTER" layoutX="10.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
+                                    <Label alignment="CENTER" focusTraversable="false" layoutX="10.0" layoutY="193.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="58.0" styleClass="player-icon">
                                        <graphic>
-                                          <ImageView fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fx:id="playerFivePic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
@@ -369,37 +369,37 @@
                                     </Label>
                                  </children>
                               </VBox>
-                              <Label fx:id="playerOne" layoutX="618.0" layoutY="517.0" styleClass="player-text" text="Player 1" textFill="WHITE">
+                              <Label fx:id="playerOne" focusTraversable="false" layoutX="618.0" layoutY="517.0" styleClass="player-text" text="Player 1" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="playerTwo" layoutX="618.0" layoutY="578.0" styleClass="player-text" text="Player 2" textFill="WHITE">
+                              <Label fx:id="playerTwo" focusTraversable="false" layoutX="618.0" layoutY="578.0" styleClass="player-text" text="Player 2" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="playerThree" layoutX="618.0" layoutY="638.0" styleClass="player-text" text="Player 3" textFill="WHITE">
+                              <Label fx:id="playerThree" focusTraversable="false" layoutX="618.0" layoutY="638.0" styleClass="player-text" text="Player 3" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="playerFour" layoutX="618.0" layoutY="699.0" styleClass="player-text" text="Player 4" textFill="WHITE">
+                              <Label fx:id="playerFour" focusTraversable="false" layoutX="618.0" layoutY="699.0" styleClass="player-text" text="Player 4" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="playerFive" layoutX="618.0" layoutY="760.0" styleClass="player-text" text="Player 5" textFill="WHITE">
+                              <Label fx:id="playerFive" focusTraversable="false" layoutX="618.0" layoutY="760.0" styleClass="player-text" text="Player 5" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="14.0" />
                                  </font>
                               </Label>
-                              <Label id="team-label" fx:id="teamNameLabel" alignment="CENTER" layoutX="935.0" layoutY="787.0" prefHeight="27.0" prefWidth="278.0" textFill="WHITE">
+                              <Label id="team-label" fx:id="teamNameLabel" alignment="CENTER" focusTraversable="false" layoutX="935.0" layoutY="787.0" prefHeight="27.0" prefWidth="278.0" textFill="WHITE">
                                  <font>
                                     <Font name="System Bold" size="24.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="948.0" layoutY="515.0" prefHeight="250.0" prefWidth="250.0" styleClass="player-icon">
+                              <Label focusTraversable="false" layoutX="948.0" layoutY="515.0" prefHeight="250.0" prefWidth="250.0" styleClass="player-icon">
                                  <graphic>
                                     <ImageView fx:id="teamIconPreview" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                                  </graphic>
@@ -415,7 +415,7 @@
                         </AnchorPane>
                         <AnchorPane fx:id="myTeamPane" prefHeight="661.0" prefWidth="1280.0" visible="false">
                            <children>
-                              <Label fx:id="myTeamHeader" alignment="CENTER" layoutX="430.0" layoutY="45.0" prefHeight="70.0" prefWidth="421.0" styleClass="header-label" textFill="WHITE" />
+                              <Label fx:id="myTeamHeader" alignment="CENTER" focusTraversable="false" layoutX="430.0" layoutY="45.0" prefHeight="70.0" prefWidth="421.0" styleClass="header-label" textFill="WHITE" />
                               <HBox layoutX="120.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="1041.0" spacing="10.0">
                                  <children>
                                     <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">

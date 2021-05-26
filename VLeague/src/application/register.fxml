@@ -114,9 +114,6 @@
                </children>
             </Pane>
          </content>
-         <effect>
-            <DropShadow />
-         </effect>
       </DialogPane>
    </children>
 </AnchorPane>

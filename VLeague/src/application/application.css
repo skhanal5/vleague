@@ -299,9 +299,23 @@
 	-fx-background-color:#1b2734;
 }
 
+.patchnotes-panel{
+	-fx-border-width:2;
+	-fx-border-color: rgba(255,255,255,.3);
+	-fx-background-color:  rgba(0,0,0,.3);
+	-fx-opacity: 1;
+}
+
 .patchnotes-panel:hover{
-	-fx-opacity:.80;
+	-fx-background-color:  rgba(0,0,0,.4);
+	-fx-border-color: rgba(255,255,255,.5);
 	-fx-cursor:hand;
+	-fx-opacity: 1;
+}
+
+.patchnotes-label{
+	-fx-font-family:"Tungsten Bold";
+	-fx-font-size:36;
 }
 
 .slideshow-text{
@@ -309,10 +323,15 @@
 	-fx-font-size:24;
 }
 
+.slideshow-panel {
+	-fx-border-width:2;
+	-fx-border-color: rgba(255,255,255,.3);
+	-fx-background-color:  rgba(0,0,0,.3);
+	-fx-opacity: 1;
+}
 .slideshow-panel:hover{
-	-fx-opacity:.80;
-	-fx-font-family:"Tungsten Bold";	
-	-fx-font-size:24;
+	-fx-border-color: rgba(255,255,255,.5);
+	-fx-cursor:hand;
 }
 
 .profile-panels:hover{
@@ -339,11 +358,6 @@
 
 .loading-animation{
 	-fx-progress-color: #fa4454;
-}
-
-.patchnotes-label{
-	-fx-font-family:"Tungsten Bold";
-	-fx-font-size:36;
 }
 
 .profile-label{

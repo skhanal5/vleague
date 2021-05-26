@@ -264,6 +264,7 @@ public class SignInController implements Initializable {
 		dialogStage.getIcons().add(new Image(getClass().getResourceAsStream("/iconlogo.png")));
 		dialogStage.setX(Main.primaryStage.getX() + (Main.primaryStage.getWidth() / 2) - root.getPrefWidth() / 2);
 		dialogStage.setY(Main.primaryStage.getY() + (Main.primaryStage.getHeight() / 2) - root.getPrefHeight() / 2);
+		dialogStage.initOwner(Main.primaryStage);
 		dialogStage.showAndWait();
 	}
 	

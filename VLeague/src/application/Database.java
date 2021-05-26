@@ -22,9 +22,9 @@ public class Database {
 	
 	//initializes static fields
 	static {
-		mongoClient = MongoClients.create("mongodb+srv://skhanal4:476v0j56OE5EO8GR@cluster0.2i8zh.mongodb.net/vleague?retryWrites=true&w=majority");
-		database = mongoClient.getDatabase("vleague");
-		users = database.getCollection("users");
+		mongoClient = MongoClients.create(Constants.CLIENT_URL);
+		database = mongoClient.getDatabase(Constants.DATABASE_NAME);
+		users = database.getCollection(Constants.COLLECTION_NAME);
 	}
 	
 	//adds user to database
@@ -35,7 +35,7 @@ public class Database {
 		.append("icon-small", "/VLEAGUE Assets/small icons/jett-small-icon.png").append("icon-large", "/VLEAGUE Assets/large icons/jett-large-icon.png")
 		.append("gold-trophy", "0").append("silver-trophy", "0").append("bronze-trophy", "0")
 		.append("matches-played", "—").append("vp-earned", "—").append("global-rank", "—").append("top-finishes", "—").append("favorite-team", "—")
-		.append("music-volume", 1.0).append("fx-volume", 1.0);
+		.append("music-volume", 1.0).append("fx-volume", 1.0).append("team-selected", false).append("current-team", "n/a");
 		users.insertOne(newUser);
 	}
 	
@@ -49,6 +49,21 @@ public class Database {
 	public void setVolume(String user, double musicVol, double fxVol) {
 		users.updateOne(Filters.in("username", user), Updates.set("music-volume", musicVol));
 		users.updateOne(Filters.in("username", user), Updates.set("fx-volume", fxVol));
+	}
+	
+	public void setTeam(String user, boolean value, String team) {
+		users.updateOne(Filters.in("username", user), Updates.set("team-selected", true));
+		users.updateOne(Filters.in("username", user), Updates.set("current-team", team));
+	}
+	
+	public Boolean checkTeam(String username) {
+		Document d = users.find(Filters.in("username", username)).first();
+		return d.getBoolean("team-selected");
+	}
+	
+	public String getMyTeam(String username) {
+		Document d = users.find(Filters.in("username", username)).first();
+		return d.getString("current-team");
 	}
 	
 	//retrieves small icon for player profile
