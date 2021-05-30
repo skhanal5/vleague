@@ -20,6 +20,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TitledPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -40,6 +41,9 @@ public class GameController implements Initializable{
 	
 	@FXML
 	private AnchorPane parent;
+	
+	@FXML
+	private ScrollPane scheduleScroll;
 	
 	@FXML
 	private AnchorPane myTeamSelect;
@@ -347,7 +351,7 @@ public class GameController implements Initializable{
 						lockIn.setDisable(false);
 					}
 				});
-
+		
 		dragStage();
 	}
 	

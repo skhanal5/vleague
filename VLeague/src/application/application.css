@@ -413,7 +413,7 @@
 	-fx-opacity:1;
 }
 
-.team-icon:focused{
+.team-icon:selected{
 	-fx-background-color: rgba(255,255,255,.1);
 	-fx-border-color: rgba(255,255,255,.8);
 	-fx-opacity:1;
@@ -440,6 +440,15 @@
 	-fx-font-size:14;
 }
 
+.schedule{
+	-fx-border-width:1.5;
+	-fx-border-color: rgba(255,255,255,.2);
+}
+
+.schedule-panel:hover{
+	-fx-background-color: rgba(255,255,255,.1);
+}
+
 #lock-in-button{
 	-fx-background-radius:0;
 	-fx-font-family:"DINPro-Bold";
@@ -463,4 +472,100 @@
 #lock-in-button:hover{
 	-fx-background-color:#e06771;
 	-fx-cursor:hand;
+}
+
+#schedule-pane-colored.titled-pane{
+	-fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color:  #54585c;
+}
+
+#schedule-pane-colored.titled-pane:hover{
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #484e55;
+    -fx-background-color: rgba(255,255,255,.01);
+}
+
+#schedule-pane-colored.titled-pane:expanded{
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #fa4454;
+}
+
+#schedule-pane-colored.titled-pane > .title {
+    -fx-pref-height: 69.0;
+    -fx-background-color: rgba(255,255,255,.05);
+    -fx-background-radius:0;
+}
+
+#schedule-pane-colored.titled-pane > *.content {
+	-fx-background-color: rgba(255,255,255,.05);
+    -fx-background-radius:0;
+    -fx-border-width: 0.0px 0.0px 0.0px 0.0px; 
+}
+
+#schedule-pane-colored.titled-pane > .title > .arrow-button .arrow{
+   -fx-background-color: transparent;
+}
+
+#schedule-pane.titled-pane{
+	-fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #54585c;
+}
+
+#schedule-pane.titled-pane:hover{
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #484e55;
+    -fx-background-color: rgba(255,255,255,.01);
+}
+
+#schedule-pane.titled-pane:expanded{
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #fa4454;
+}
+
+#schedule-pane.titled-pane > .title {
+    -fx-pref-height: 69.0;
+    -fx-background-color: transparent;
+    -fx-background-radius:0;
+}
+
+#schedule-pane.titled-pane > *.content {
+	-fx-background-color: transparent;
+    -fx-background-radius:0;
+    -fx-border-width: 0.0px 0.0px 0.0px 0.0px; 
+}
+
+#schedule-pane.titled-pane > .title > .arrow-button .arrow{
+   -fx-background-color: transparent;
+}
+
+#champions-pane.titled-pane{
+	-fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color:  #54585c;
+}
+
+#champions-pane.titled-pane:hover{
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #484e55;
+    -fx-background-color: rgba(255,255,255,.01);
+}
+
+#champions-pane.titled-pane:expanded{
+    -fx-border-width: 0px 0px 0px 3px;
+    -fx-border-color: #fa4454;
+}
+
+#champions-pane.titled-pane > .title {
+    -fx-pref-height: 138.0;
+    -fx-background-color: rgba(255,255,255,.05);
+    -fx-background-radius:0;
+}
+
+#champions-pane.titled-pane > *.content {
+	-fx-background-color: rgba(255,255,255,.05);
+    -fx-background-radius:0;
+    -fx-border-width: 0.0px 0.0px 0.0px 0.0px; 
+}
+
+#champions-pane.titled-pane > .title > .arrow-button .arrow{
+   -fx-background-color: transparent;
 }

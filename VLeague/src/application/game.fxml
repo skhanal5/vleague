@@ -2,12 +2,13 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,7 +24,7 @@
 
 <AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
    <children>
-      <TabPane fx:id="tabpane" prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane fx:id="tabpane" focusTraversable="false" prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
             <Tab closable="false" disable="true">
               <content>
@@ -37,19 +38,19 @@
             </Tab>
           <Tab fx:id="homeTab" closable="false" text="Home">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1079.0">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1079.0" style="-fx-background-color: #0f1923;">
                      <children>
-                        <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="-51.0" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                        <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="-51.0" opacity="0.24" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                            <image>
                               <Image url="@../../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="720.0" fitWidth="1281.0" layoutX="-1.0" layoutY="-59.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="720.0" fitWidth="1281.0" layoutX="-1.0" layoutY="-59.0" opacity="0.24" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../resources/VLEAGUE%20Assets/info-panel-blur.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-63.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-63.0" opacity="0.24" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
                            </image>
@@ -157,15 +158,12 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0f1923;">
                      <children>
-                        <AnchorPane fx:id="myTeamSelect" layoutX="-432.0" layoutY="-381.0">
+                        <AnchorPane fx:id="myTeamSelect" layoutX="-432.0" layoutY="-381.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="1714.0">
                            <children>
-                              <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="381.0" layoutY="381.0" pickOnBounds="true" preserveRatio="true" styleClass="pagination" visible="false">
+                              <ImageView fitHeight="720.0" fitWidth="1297.0" layoutX="431.0" layoutY="383.0" opacity="0.1" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                  <image>
-                                    <Image url="@../../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
+                                    <Image url="@../../resources/VLEAGUE%20Assets/MyTeam%20bg.png" />
                                  </image>
-                                 <effect>
-                                    <BoxBlur height="255.0" iterations="3" width="255.0" />
-                                 </effect>
                               </ImageView>
                               <Label focusTraversable="false" layoutX="959.0" layoutY="426.0" styleClass="header-label" text="TEAM SELECT" textFill="WHITE" />
                               <HBox layoutX="762.0" layoutY="829.0" prefHeight="75.0" prefWidth="620.0" spacing="3.0">
@@ -448,11 +446,823 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <ScrollPane hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
+                        <ScrollPane fx:id="scheduleScroll" focusTraversable="false" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
                            <content>
-                              <AnchorPane prefHeight="1211.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
+                              <AnchorPane prefHeight="1751.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
                                  <children>
-                                    <Label layoutX="479.0" layoutY="45.0" styleClass="header-label" text="2021 SEASON OVERVIEW" textFill="WHITE" />
+                                    <ImageView fitHeight="1751.0" fitWidth="1311.0" opacity="0.04" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                       <image>
+                                          <Image url="@../../resources/VLEAGUE%20Assets/schedule%20bg.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label focusTraversable="false" layoutX="484.0" layoutY="45.0" styleClass="header-label" text="2021 SEASON OVERVIEW" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="12.0" />
+                                       </font></Label>
+                                    <Label focusTraversable="false" layoutX="637.0" layoutY="147.0" text="STAGE ONE" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label focusTraversable="false" layoutX="634.0" layoutY="179.0" text="JANUARY-MARCH 2021" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="100.0" layoutX="496.0" layoutY="174.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Line endX="100.0" layoutX="938.0" layoutY="174.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Accordion layoutX="351.0" layoutY="232.0" prefHeight="313.0" prefWidth="688.0">
+                                       <panes>
+                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children></AnchorPane>
+                                            </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 1" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children></AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 2" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children></AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="14.0" text="Champions Tour North America: Challengers 3" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children></AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="219.0" layoutY="13.0" text="Masters: First Strike" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
+                                    <Label focusTraversable="false" layoutX="637.0" layoutY="585.0" text="STAGE TWO" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label focusTraversable="false" layoutX="649.0" layoutY="617.0" text="MARCH-MAY 2021" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="100.0" layoutX="496.0" layoutY="611.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Line endX="100.0" layoutX="938.0" layoutY="611.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Accordion layoutX="351.0" layoutY="668.0" prefHeight="313.0" prefWidth="688.0">
+                                       <panes>
+                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 1" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 2" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 3" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="226.0" layoutY="13.0" text="Masters: Reykjavík" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
+                                    <Label layoutX="628.0" layoutY="1023.0" text="STAGE THREE" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="636.0" layoutY="1055.0" text="JUNE-SEPTEMBER 2021" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="100.0" layoutX="498.0" layoutY="1047.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Line endX="100.0" layoutX="938.0" layoutY="1047.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Accordion layoutX="351.0" layoutY="1104.0" prefHeight="313.0" prefWidth="688.0">
+                                       <panes>
+                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 1" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 2" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 3" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="168.0" layoutY="-3.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <Pane prefHeight="49.0" prefWidth="607.0">
+                                                   <children>
+                                                      <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label layoutX="240.0" layoutY="13.0" text="Masters: Berlin" textFill="WHITE">
+                                                         <font>
+                                                            <Font name="DINPro-Bold" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </graphic>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
+                                    <Label focusTraversable="false" layoutX="619.0" layoutY="1461.0" text="SEASON FINALE" textFill="WHITE">
+                                       <font>
+                                          <Font name="Tungsten-Bold" size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="100.0" layoutX="498.0" layoutY="1483.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Line endX="100.0" layoutX="938.0" layoutY="1483.0" startX="-145.0" stroke="#ffffff33" />
+                                    <Accordion layoutX="351.0" layoutY="1540.0" prefHeight="170.0" prefWidth="688.0">
+                                       <panes>
+                                          <TitledPane id="champions-pane" animated="false" expanded="false" minWidth="-Infinity" prefHeight="256.0" prefWidth="649.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="721.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="192.0" layoutY="-1.0">
+                                                         <children>
+                                                            <Label layoutX="10.0" text="STATUS:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="143.0" text="PRIZE POOL:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="298.0" text="DATES:" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutY="12.0" text="UPCOMING" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="126.0" layoutY="12.0" text="TO BE DETERMINED" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="293.0" layoutY="12.0" text="DEC 2021" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="10.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                             <graphic>
+                                                <AnchorPane prefHeight="130.0" prefWidth="651.0">
+                                                   <children>
+                                                      <ImageView fitHeight="95.0" fitWidth="321.0" layoutX="165.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../../resources/VLEAGUE%20Assets/CHAMPIONS%20LOGO.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </graphic>
+                                          </TitledPane>
+                                       </panes>
+                                    </Accordion>
                                  </children></AnchorPane>
                            </content>
                         </ScrollPane>
