@@ -9,6 +9,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.BoxBlur?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -20,6 +21,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GameController">
@@ -40,17 +42,17 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1079.0" style="-fx-background-color: #0f1923;">
                      <children>
-                        <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="-51.0" opacity="0.24" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                        <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="-51.0" opacity="0.37" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                            <image>
                               <Image url="@../../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="720.0" fitWidth="1281.0" layoutX="-1.0" layoutY="-59.0" opacity="0.24" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="720.0" fitWidth="1281.0" layoutX="-1.0" layoutY="-59.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../resources/VLEAGUE%20Assets/info-panel-blur.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-63.0" opacity="0.24" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-63.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
                            </image>
@@ -450,7 +452,7 @@
                            <content>
                               <AnchorPane prefHeight="1751.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
                                  <children>
-                                    <ImageView fitHeight="1751.0" fitWidth="1311.0" opacity="0.04" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                    <ImageView fitHeight="1751.0" fitWidth="1311.0" layoutX="-6.0" layoutY="-6.0" opacity="0.05" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
                                           <Image url="@../../resources/VLEAGUE%20Assets/schedule%20bg.png" />
                                        </image>
@@ -1273,14 +1275,446 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1003.0">
                      <children>
-                        <ScrollPane fx:id="resultsScroll" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
+                        <AnchorPane fx:id="resultDefaultScreen" prefHeight="662.0" prefWidth="1280.0" style="-fx-background-color: #0f1923;">
+                           <children>
+                              <Label layoutX="505.0" layoutY="42.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
+                              <Pane blendMode="OVERLAY" layoutX="291.0" layoutY="150.0" prefHeight="322.0" prefWidth="716.0" style="-fx-background-color: #0f1923;">
+                                 <effect>
+                                    <BoxBlur height="145.72" iterations="3" width="72.86" />
+                                 </effect>
+                              </Pane>
+                              <ImageView fitHeight="1131.0" fitWidth="1748.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                 <image>
+                                    <Image url="@../../resources/VLEAGUE%20Assets/gradient%202.png" />
+                                 </image>
+                              </ImageView>
+                              <FontIcon fill="WHITE" iconColor="#fa4454" iconLiteral="fa-warning" iconSize="50" layoutX="624.0" layoutY="252.0" wrappingWidth="51.0" />
+                              <Label layoutX="490.0" layoutY="260.0" text="No Team Selection!" textFill="WHITE">
+                                 <font>
+                                    <Font name="DINPro-Bold" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="458.0" layoutY="310.0" prefHeight="59.0" prefWidth="382.0" text="You have not selected a team yet so there are no results available to view." textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="483.0" layoutY="360.0" prefHeight="59.0" prefWidth="332.0" text="Please head over to MyTeam and come back to view how your team is doing this season!" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane fx:id="resultsScroll" disable="true" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS" visible="false">
                            <content>
-                              <AnchorPane onScroll="#onStreamScrolling" prefHeight="1211.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
+                              <AnchorPane onScroll="#onStreamScrolling" prefHeight="975.0" prefWidth="1453.0" style="-fx-background-color: #0f1923;">
                                  <children>
+                                    <ImageView fitHeight="1131.0" fitWidth="1748.0" layoutY="4.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                       <image>
+                                          <Image url="@../../resources/VLEAGUE%20Assets/gradient%202.png" />
+                                       </image>
+                                    </ImageView>
                                     <Label layoutX="559.0" layoutY="45.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
+                                    <VBox layoutX="293.0" layoutY="150.0" spacing="0.5">
+                                       <children>
+                                          <Pane prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font></Label>
+                                                <ImageView fx:id="leftLogo1" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam1" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font></Label>
+                                                <Label fx:id="rightTeam1" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo1" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date1" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font></Text>
+                                                <Label fx:id="score1" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children></Pane>
+                                          <Pane layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo2" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam2" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam2" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo2" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date2" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score2" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="80.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo3" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam3" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam3" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo3" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date3" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score3" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="150.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo4" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam4" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam4" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo4" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date4" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score4" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="220.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo5" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam5" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam5" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo5" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date5" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score5" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="290.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo6" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam6" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam6" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo6" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date6" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score6" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="20.0" layoutY="230.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo7" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam7" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam7" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo7" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date7" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score7" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="20.0" layoutY="300.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo8" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam8" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam8" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo8" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date8" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score8" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="500.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo9" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam9" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam9" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo9" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date9" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score9" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <Pane layoutX="10.0" layoutY="500.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                             <children>
+                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="leftLogo10" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label fx:id="leftTeam10" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="rightTeam10" layoutX="537.0" layoutY="21.0" text="Team B" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="rightLogo10" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Text fx:id="date10" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Text>
+                                                <Label fx:id="score10" layoutX="755.0" layoutY="21.0" text="3-1" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
                                  </children></AnchorPane>
                            </content>
                         </ScrollPane>
+                        <AnchorPane fx:id="resultLoadScreen" prefHeight="660.0" prefWidth="1280.0" style="-fx-background-color: #0f1923;" visible="false">
+                           <children>
+                              <Circle fill="TRANSPARENT" layoutX="640.0" layoutY="291.0" radius="36.0" stroke="#fa4554" strokeWidth="3.0" />
+                              <Circle fx:id="resultLoadCircle" fill="TRANSPARENT" layoutX="640.0" layoutY="291.0" radius="36.0" stroke="#131b25" strokeWidth="5.0" style="-fx-stroke-dash-array: 170;" />
+                           </children>
+                        </AnchorPane>
                      </children></AnchorPane>
                </content>
             </Tab>
@@ -1292,6 +1726,11 @@
                            <content>
                               <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onScroll="#onLeaderboardScrolling" prefHeight="1211.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
                                  <children>
+                                    <ImageView fitHeight="1237.0" fitWidth="1339.0" opacity="0.11" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                       <image>
+                                          <Image url="@../../resources/VLEAGUE%20Assets/gradient%20large%202.png" />
+                                       </image>
+                                    </ImageView>
                                     <Pane fx:id="leaderboardPane" layoutX="320.0" layoutY="150.0" prefHeight="980.0" prefWidth="748.0" style="-fx-background-radius: 15; -fx-background-color: #1b2734; -fx-border-color: rgba(255,255,255,.01); -fx-border-radius: 15 15 15 15;">
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="980.0" prefWidth="748.0">
@@ -1306,12 +1745,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="beasttrickshotss" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 13,540" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1333,7 +1772,7 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="emphills" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
@@ -1360,12 +1799,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="NotSubodh" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 11,750" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1396,12 +1835,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="killer111bee" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 10,500" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1427,12 +1866,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="dios" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 7,500" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1458,12 +1897,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="bullyooo" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 7,250" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1489,12 +1928,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="gunkman" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 7,000" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1520,12 +1959,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="domdom" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 6,800" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1551,12 +1990,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="123million" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 6,700" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1582,12 +2021,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="actavis" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 5,500" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1613,12 +2052,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="TheJangsterr" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 5,100" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1644,12 +2083,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="slump-_-" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 5,025" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1675,12 +2114,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="FFives" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 4,100" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1706,12 +2145,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="Dinzzo" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 3,800" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>
@@ -1737,12 +2176,12 @@
                                                             <DropShadow />
                                                          </effect>
                                                       </ImageView>
-                                                      <Label layoutX="143.0" layoutY="25.0" text="User" textFill="WHITE">
+                                                      <Label layoutX="143.0" layoutY="25.0" text="Jintroid" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="14.0" />
                                                          </font>
                                                       </Label>
-                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 12,800" textFill="WHITE">
+                                                      <Label layoutX="655.0" layoutY="26.0" text="VP: 3,000" textFill="WHITE">
                                                          <font>
                                                             <Font name="System Bold" size="12.0" />
                                                          </font>

@@ -158,7 +158,6 @@ public class SignInController implements Initializable {
 		Task<Parent>loadTask = new Task<Parent>() {
 			@Override
 			public Parent call() throws Exception {
-				Thread.sleep(125);
 				FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
 				Parent root = loader.load();
 				GameController controller = loader.getController();

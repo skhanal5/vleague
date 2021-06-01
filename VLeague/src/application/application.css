@@ -413,7 +413,7 @@
 	-fx-opacity:1;
 }
 
-.team-icon:selected{
+.team-icon:focused{
 	-fx-background-color: rgba(255,255,255,.1);
 	-fx-border-color: rgba(255,255,255,.8);
 	-fx-opacity:1;
@@ -568,4 +568,14 @@
 
 #champions-pane.titled-pane > .title > .arrow-button .arrow{
    -fx-background-color: transparent;
+}
+
+.results-pane{
+    -fx-background-color: rgba(255,255,255,.01);
+    -fx-border-width:1;
+	-fx-border-color: rgba(255,255,255,.2);
+}
+
+.results-pane:hover{
+    -fx-background-color: rgba(255,255,255,.03);
 }

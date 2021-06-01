@@ -9,6 +9,7 @@ import org.kordamp.ikonli.javafx.FontIcon;
 import javafx.animation.KeyFrame;
 import javafx.animation.RotateTransition;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -20,7 +21,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
-import javafx.scene.control.TitledPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
@@ -32,6 +32,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -53,6 +54,12 @@ public class GameController implements Initializable{
 	
 	@FXML
 	private AnchorPane myTeamPane;
+	
+	@FXML
+	private AnchorPane resultDefaultScreen;
+	
+	@FXML
+	private AnchorPane resultLoadScreen;
 	
 	@FXML
 	private Tab homeTab;
@@ -95,6 +102,9 @@ public class GameController implements Initializable{
 	
 	@FXML
 	private Circle teamLoadCircle;
+	
+	@FXML
+	private Circle resultLoadCircle;
 	
 	@FXML
 	private Pane homePane1;
@@ -170,6 +180,186 @@ public class GameController implements Initializable{
 	
 	@FXML
 	private Label myTeamHeader;
+	
+	@FXML
+	private Text date1;
+	
+	@FXML
+	private Text date2;
+	
+	@FXML
+	private Text date3;
+	
+	@FXML
+	private Text date4;
+	
+	@FXML
+	private Text date5;
+	
+	@FXML
+	private Text date6;
+	
+	@FXML
+	private Text date7;
+	
+	@FXML
+	private Text date8;
+	
+	@FXML
+	private Text date9;
+	
+	@FXML
+	private Text date10;
+	
+	@FXML
+	private Label leftTeam1;
+	
+	@FXML
+	private Label leftTeam2;
+	
+	@FXML
+	private Label leftTeam3;
+	
+	@FXML
+	private Label leftTeam4;
+	
+	@FXML
+	private Label leftTeam5;
+	
+	@FXML
+	private Label leftTeam6;
+	
+	@FXML
+	private Label leftTeam7;
+	
+	@FXML
+	private Label leftTeam8;
+	
+	@FXML
+	private Label leftTeam9;
+	
+	@FXML
+	private Label leftTeam10;
+	
+	@FXML
+	private Label rightTeam1;
+	
+	@FXML
+	private Label rightTeam2;
+	
+	@FXML
+	private Label rightTeam3;
+	
+	@FXML
+	private Label rightTeam4;
+	
+	@FXML
+	private Label rightTeam5;
+	
+	@FXML
+	private Label rightTeam6;
+	
+	@FXML
+	private Label rightTeam7;
+	
+	@FXML
+	private Label rightTeam8;
+	
+	@FXML
+	private Label rightTeam9;
+	
+	@FXML
+	private Label rightTeam10;
+	
+	@FXML
+	private Label score1;
+	
+	@FXML
+	private Label score2;
+	
+	@FXML
+	private Label score3;
+	
+	@FXML
+	private Label score4;
+	
+	@FXML
+	private Label score5;
+	
+	@FXML
+	private Label score6;
+	
+	@FXML
+	private Label score7;
+	
+	@FXML
+	private Label score8;
+	
+	@FXML
+	private Label score9;
+	
+	@FXML
+	private Label score10;
+	
+	@FXML
+	private ImageView leftLogo1;
+	
+	@FXML
+	private ImageView leftLogo2;
+	
+	@FXML
+	private ImageView leftLogo3;
+	
+	@FXML
+	private ImageView leftLogo4;
+	
+	@FXML
+	private ImageView leftLogo5;
+	
+	@FXML
+	private ImageView leftLogo6;
+	
+	@FXML
+	private ImageView leftLogo7;
+	
+	@FXML
+	private ImageView leftLogo8;
+	
+	@FXML
+	private ImageView leftLogo9;
+	
+	@FXML
+	private ImageView leftLogo10;
+	
+	@FXML
+	private ImageView rightLogo1;
+	
+	@FXML
+	private ImageView rightLogo2;
+	
+	@FXML
+	private ImageView rightLogo3;
+	
+	@FXML
+	private ImageView rightLogo4;
+	
+	@FXML
+	private ImageView rightLogo5;
+	
+	@FXML
+	private ImageView rightLogo6;
+	
+	@FXML
+	private ImageView rightLogo7;
+	
+	@FXML
+	private ImageView rightLogo8;
+	
+	@FXML
+	private ImageView rightLogo9;
+	
+	@FXML
+	private ImageView rightLogo10;
 	
 	@FXML
 	private ImageView playerOnePic;
@@ -289,6 +479,9 @@ public class GameController implements Initializable{
 				.addListener((observable, oldValue, newValue) -> {
 					if (resultsTab.isSelected()) {
 						resultsCircle.setFill(Color.web("#fa4454"));
+						if (Main.database.checkTeam(username.getText())) {
+							resultLoad();
+						}
 					} else {
 						resultsScroll.setVvalue(0);
 						resultsCircle.setFill(Color.web("#c7c7c7"));
@@ -458,6 +651,31 @@ public class GameController implements Initializable{
 			myTeamLoad.setVisible(false);
 			myTeamPane.setVisible(true);
 			myTeamHeader.setText(Main.database.getMyTeam(username.getText()));
+		});
+	}
+	
+	public void resultLoad() {		
+		resultDefaultScreen.setVisible(false);
+		resultDefaultScreen.setDisable(true);
+		resultLoadScreen.setVisible(true);
+		RotateTransition rotation = new RotateTransition(Duration.seconds(1.25), resultLoadCircle);
+		rotation.setByAngle(360);
+		rotation.play();
+		new Thread(() -> {
+			Webscraper data = new Webscraper(Main.database.getMyTeam(username.getText()));	
+			Platform.runLater(() -> {
+				data.setDate(date1, date2, date3, date4, date5, date6, date7, date8, date9, date10);
+				data.setOpponent(rightTeam1, rightTeam2, rightTeam3, rightTeam4, rightTeam5, rightTeam6, rightTeam7, rightTeam8, rightTeam9, rightTeam10,
+						rightLogo1, rightLogo2, rightLogo3, rightLogo4, rightLogo5, rightLogo6, rightLogo7, rightLogo8, rightLogo9, rightLogo10	);
+				data.setScores(score1, score2, score3, score4, score5, score6, score7, score8, score9, score10);
+				data.setSelf(leftLogo1, leftLogo2, leftLogo3, leftLogo4, leftLogo5, leftLogo6, leftLogo7, leftLogo8, leftLogo9, leftLogo10,
+						leftTeam1, leftTeam2, leftTeam3, leftTeam4, leftTeam5, leftTeam6, leftTeam7, leftTeam8, leftTeam9, leftTeam10);
+			});
+		}).start();
+		rotation.setOnFinished(event -> {
+			resultLoadScreen.setVisible(false);
+			resultsScroll.setVisible(true);
+			resultsScroll.setDisable(false);
 		});
 	}
 	
