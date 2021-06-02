@@ -31,6 +31,7 @@ I am currently working on adding comments and making the code more comprehensive
 
 ## Acknowledgements
 
+* [VLR.GG](https://www.vlr.gg/) - Used website to scrape data related to VALORANT esports
 * [VALORANT Media Kit](https://playvalorant.com/en-us/media/) - Utilized images for backdrops, icons, etc.
 * [Ikonli Pack](https://kordamp.org/ikonli/) - Made use of various icons throughout the UI
 
