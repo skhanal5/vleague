@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 8.28px;
+      }
+
+      .cls-2 {
+        font-size: 48px;
+        fill: #fff;
+        font-family: VALORANT;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="50.5" cy="50.5" r="42.531"/>
+  <text id="Vp" class="cls-2" x="14.667" y="36.667">Vp</text>
+</svg>

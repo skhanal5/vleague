@@ -455,11 +455,11 @@ public class GameController implements Initializable{
 							playerThree.setText("Player 3");
 							playerFour.setText("Player 4");
 							playerFive.setText("Player 5");
-							playerOnePic.setImage(new Image (getClass().getResourceAsStream("/VLEAGUE Assets/team icons/person-icon.png")));
-							playerTwoPic.setImage(new Image (getClass().getResourceAsStream("/VLEAGUE Assets/team icons/person-icon.png")));
-							playerThreePic.setImage(new Image (getClass().getResourceAsStream("/VLEAGUE Assets/team icons/person-icon.png")));
-							playerFourPic.setImage(new Image (getClass().getResourceAsStream("/VLEAGUE Assets/team icons/person-icon.png")));
-							playerFivePic.setImage(new Image (getClass().getResourceAsStream("/VLEAGUE Assets/team icons/person-icon.png")));
+							playerOnePic.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/person-icon.png")));
+							playerTwoPic.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/person-icon.png")));
+							playerThreePic.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/person-icon.png")));
+							playerFourPic.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/person-icon.png")));
+							playerFivePic.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/person-icon.png")));
 						}
 					} else {
 						myTeamCircle.setFill(Color.web("#c7c7c7"));
@@ -553,7 +553,7 @@ public class GameController implements Initializable{
 		username.setText(user);
 		initializeProfilePage(user);
 		try {
-			Media audioFile = new Media(getClass().getResource("/bgmusic.mp3").toURI().toString());
+			Media audioFile = new Media(getClass().getResource("/resources/bgmusic.mp3").toURI().toString());
 			bgMusic = new MediaPlayer(audioFile);
 			
 			//loops background music indefinitely
@@ -720,8 +720,6 @@ public class GameController implements Initializable{
 		dialogStage.initStyle(StageStyle.TRANSPARENT);
 		dialogStage.setScene(scene);
 		dialogStage.initModality(Modality.APPLICATION_MODAL);
-		dialogStage.setTitle("VLeague Client");
-		dialogStage.getIcons().add(new Image(getClass().getResourceAsStream("/iconlogo.png")));
 		dialogStage.setX(Main.primaryStage.getX() + (Main.primaryStage.getWidth() / 2) - root.getPrefWidth() / 2);
 		dialogStage.setY(Main.primaryStage.getY() + (Main.primaryStage.getHeight() / 2) - root.getPrefHeight() / 2);
 		SettingsController controller = loader.getController();
@@ -770,72 +768,72 @@ public class GameController implements Initializable{
 	
 	@FXML
 	private void onBrimLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/brim-large-icon.png", "/VLEAGUE Assets/small icons/brim-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/brim-large-icon.png", "/resources/VLEAGUE Assets/small icons/brim-small-icon.png");
 	}
 	
 	@FXML
 	private void onCypherLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/cypher-large-icon.png", "/VLEAGUE Assets/small icons/cypher-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/cypher-large-icon.png", "/resources/VLEAGUE Assets/small icons/cypher-small-icon.png");
 	}
 	
 	@FXML
 	private void onSkyeLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/sky-large-icon.png", "/VLEAGUE Assets/small icons/skye-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/sky-large-icon.png", "/resources/VLEAGUE Assets/small icons/skye-small-icon.png");
 	}
 	
 	@FXML
 	private void onPhoenixLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/phoenix-large-icon.png", "/VLEAGUE Assets/small icons/phoenix-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/phoenix-large-icon.png", "/resources/VLEAGUE Assets/small icons/phoenix-small-icon.png");
 	}
 	
 	@FXML
 	private void onRazeLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/raze-large-icon.png", "/VLEAGUE Assets/small icons/raze-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/raze-large-icon.png", "/resources/VLEAGUE Assets/small icons/raze-small-icon.png");
 	}
 	
 	@FXML
 	private void onJettLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/jett-large-icon.png", "/VLEAGUE Assets/small icons/jett-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/jett-large-icon.png", "/resources/VLEAGUE Assets/small icons/jett-small-icon.png");
 	}
 	
 	@FXML
 	private void onReynaLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/reyna-large-icon.png", "/VLEAGUE Assets/small icons/reyna-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/reyna-large-icon.png", "/resources/VLEAGUE Assets/small icons/reyna-small-icon.png");
 	}
 	
 	@FXML
 	private void onSovaLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/sova-large-icon.png", "/VLEAGUE Assets/small icons/sova-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/sova-large-icon.png", "/resources/VLEAGUE Assets/small icons/sova-small-icon.png");
 	}
 	
 	@FXML
 	private void onKillJoyLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/sova-large-icon.png", "/VLEAGUE Assets/small icons/sova-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/sova-large-icon.png", "/resources/VLEAGUE Assets/small icons/sova-small-icon.png");
 	}
 	
 	@FXML
 	private void onOmenLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/omen-large-icon.png", "/VLEAGUE Assets/small icons/omen-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/omen-large-icon.png", "/resources/VLEAGUE Assets/small icons/omen-small-icon.png");
 	}
 	
 	@FXML
 	private void onSageLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/sage-large-icon.png", "/VLEAGUE Assets/small icons/sage-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/sage-large-icon.png", "/resources/VLEAGUE Assets/small icons/sage-small-icon.png");
 	}
 	
 	@FXML
 	private void onYoruLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/yoru-large-icon.png", "/VLEAGUE Assets/small icons/yoru-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/yoru-large-icon.png", "/resources/VLEAGUE Assets/small icons/yoru-small-icon.png");
 	}
 	
 	@FXML
 	private void onViperLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/viper-large-icon.png", "/VLEAGUE Assets/small icons/viper-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/viper-large-icon.png", "/resources/VLEAGUE Assets/small icons/viper-small-icon.png");
 	}
 	
 	@FXML
 	private void onBreachLabelSelect(MouseEvent event) {
-		playerIconShowcase("/VLEAGUE Assets/large icons/breach-large-icon.png", "/VLEAGUE Assets/small icons/breach-small-icon.png");
+		playerIconShowcase("/resources/VLEAGUE Assets/large icons/breach-large-icon.png", "/resources/VLEAGUE Assets/small icons/breach-small-icon.png");
 	}
 	
 	private void showcaseTeam(String teamName, String imageURL, String player1, String player2, String player3, String player4, String player5,
@@ -856,130 +854,130 @@ public class GameController implements Initializable{
 	
 	@FXML
 	private void onTSMSelect(MouseEvent event) {
-		showcaseTeam("TEAM SOLOMID","/VLEAGUE Assets/large team icon/tsm-large.png", "WARDELL", "hazed", "Drone", "Subroza", "brax",
-					"/VLEAGUE Assets/team icons/tsm/TSM_Wardell_2020.png", "/VLEAGUE Assets/team icons/tsm/TSM_hazed_2020.png",
-					"/VLEAGUE Assets/team icons/tsm/TSM_Drone_2020.png", "/VLEAGUE Assets/team icons/tsm/TSM_Subroza_2020.png",
-					"/VLEAGUE Assets/team icons/tsm/TSM_Cutler_2020.png");
+		showcaseTeam("TEAM SOLOMID","/resources/VLEAGUE Assets/large team icon/tsm-large.png", "WARDELL", "hazed", "Drone", "Subroza", "brax",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void on100TSelect(MouseEvent event) {
-		showcaseTeam("100 THIEVES","/VLEAGUE Assets/large team icon/100t-large.png", "Hiko", "Ethan", "Asuna", "nitr0", "steel",
-				"/VLEAGUE Assets/team icons/100t/100T_Hiko_2020.png", "/VLEAGUE Assets/team icons/100t/100T_Ethan_2020.png",
-				"/VLEAGUE Assets/team icons/100t/100T_Asuna_2020.png", "/VLEAGUE Assets/team icons/100t/100T_nitr0_2020.png",
-				"/VLEAGUE Assets/team icons/100t/100T_steel_2020.png");
+		showcaseTeam("100 THIEVES","/resources/VLEAGUE Assets/large team icon/100t-large.png", "Hiko", "Ethan", "Asuna", "nitr0", "steel",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onC9Select(MouseEvent event) {
-		showcaseTeam("CLOUD 9","/VLEAGUE Assets/large team icon/c9-large.png", "leaf", "xeta", "poiz", "mitch", "floppy",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("CLOUD 9","/resources/VLEAGUE Assets/large team icon/c9-large.png", "leaf", "xeta", "poiz", "mitch", "floppy",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onSentinelsSelect(MouseEvent event) {
-		showcaseTeam("SENTINELS","/VLEAGUE Assets/large team icon/sen-large.png", "TenZ", "ShahZam", "SicK", "zombs", "dapr",
-				"/VLEAGUE Assets/team icons/sentinels/SEN_TenZ_2020.png", "/VLEAGUE Assets/team icons/sentinels/SEN_ShahZaM_2020.png",
-				"/VLEAGUE Assets/team icons/sentinels/SEN_SicK_2020.png", "/VLEAGUE Assets/team icons/sentinels/SEN_zombs_2020.png",
-				"/VLEAGUE Assets/team icons/sentinels/SEN_dapr_2020.png");
+		showcaseTeam("SENTINELS","/resources/VLEAGUE Assets/large team icon/sen-large.png", "TenZ", "ShahZam", "SicK", "zombs", "dapr",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onEnvySelect(MouseEvent event) {
-		showcaseTeam("ENVY","/VLEAGUE Assets/large team icon/envy-large.png", "Victor", "crashies", "FNS", "mummAy", "kaboose",
-				"/VLEAGUE Assets/team icons/envy/ENVY_Victor_2020.png", "/VLEAGUE Assets/team icons/envy/ENVY_Crashies_2020.png",
-				"/VLEAGUE Assets/team icons/envy/ENVY_FNS_2020.png", "/VLEAGUE Assets/team icons/envy/ENVY_Mummay_2020.png",
-				"/VLEAGUE Assets/team icons/envy/ENVY_Kaboose_2020.png");
+		showcaseTeam("ENVY","/resources/VLEAGUE Assets/large team icon/envy-large.png", "Victor", "crashies", "FNS", "mummAy", "kaboose",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onGenGSelect(MouseEvent event) {
-		showcaseTeam("GEN.G","/VLEAGUE Assets/large team icon/geng-large.png", "huynh", "Mkael", "gMd", "koosta", "Shawn",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");;
+		showcaseTeam("GEN.G","/resources/VLEAGUE Assets/large team icon/geng-large.png", "huynh", "Mkael", "gMd", "koosta", "Shawn",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");;
 	}
 	
 	@FXML
 	private void onLGSelect(MouseEvent event) {
-		showcaseTeam("LUMINOSITY GAMING","/VLEAGUE Assets/large team icon/lg-large.png", "aproto", "stellar", "thief", "YaBoiDre", "moose",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("LUMINOSITY GAMING","/resources/VLEAGUE Assets/large team icon/lg-large.png", "aproto", "stellar", "thief", "YaBoiDre", "moose",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onFazeSelect(MouseEvent event) {
-		showcaseTeam("FAZE CLAN","/VLEAGUE Assets/large team icon/faze-large.png", "ZachaREEE", "BABYBAY", "Marved", "Rawkus", "corey",
-				"/VLEAGUE Assets/team icons/faze/FaZe_Zacharee_2020.png", "/VLEAGUE Assets/team icons/faze/FaZe_babybay_2020.png",
-				"/VLEAGUE Assets/team icons/faze/Faze_marved_2020.png", "/VLEAGUE Assets/team icons/faze/FaZe_Rawkus_2020.png",
-				"/VLEAGUE Assets/team icons/faze/FaZe_Corey.png");
+		showcaseTeam("FAZE CLAN","/resources/VLEAGUE Assets/large team icon/faze-large.png", "ZachaREEE", "BABYBAY", "Marved", "Rawkus", "corey",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onXSETSelect(MouseEvent event) {
-		showcaseTeam("XSET GAMING","/VLEAGUE Assets/large team icon/xset-large.png", "PureR", "AYRIN", "WeDid", "BcJ", "thwifo",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("XSET GAMING","/resources/VLEAGUE Assets/large team icon/xset-large.png", "PureR", "AYRIN", "WeDid", "BcJ", "thwifo",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onNRGSelect(MouseEvent event) {
-		showcaseTeam("NRG ESPORTS","/VLEAGUE Assets/large team icon/nrg-large.png", "ANDROID", "eeiu", "s0m", "daps", "tex",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("NRG ESPORTS","/resources/VLEAGUE Assets/large team icon/nrg-large.png", "ANDROID", "eeiu", "s0m", "daps", "tex",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onIMTSelect(MouseEvent event) {
-		showcaseTeam("IMMORTALS","/VLEAGUE Assets/large team icon/imt-large.png", "N/A", "Kehmicals", "jcStani", "Genghsta", "ShoT_UP",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("IMMORTALS","/resources/VLEAGUE Assets/large team icon/imt-large.png", "N/A", "Kehmicals", "jcStani", "Genghsta", "ShoT_UP",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onT1Select(MouseEvent event) {
-		showcaseTeam("T1 ESPORTS","/VLEAGUE Assets/large team icon/t1-large.png", "autimatic", "curry", "Skadoodle", "Spyder", "DaZeD",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("T1 ESPORTS","/resources/VLEAGUE Assets/large team icon/t1-large.png", "autimatic", "curry", "Skadoodle", "Spyder", "DaZeD",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onV1Select(MouseEvent event) {
-		showcaseTeam("VERSION 1","/VLEAGUE Assets/large team icon/v1-large.png", "vanity", "effys", "Zellsis", "penny", "wippie",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("VERSION 1","/resources/VLEAGUE Assets/large team icon/v1-large.png", "vanity", "effys", "Zellsis", "penny", "wippie",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onRNGSelect(MouseEvent event) {
-		showcaseTeam("RENEGADES","/VLEAGUE Assets/large team icon/rng-large.png", "Stronglegs", "cp2", "randyySAVAGE", "Winsum", "RetrQ",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("RENEGADES","/resources/VLEAGUE Assets/large team icon/rng-large.png", "Stronglegs", "cp2", "randyySAVAGE", "Winsum", "RetrQ",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onBBGSelect(MouseEvent event) {
-		showcaseTeam("BUILT BY GAMERS","/VLEAGUE Assets/large team icon/bbg-large.png", "Poach", "rarkar", "Critical", "Bjor", "Will",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("BUILT BY GAMERS","/resources/VLEAGUE Assets/large team icon/bbg-large.png", "Poach", "rarkar", "Critical", "Bjor", "Will",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML
 	private void onANDBOXSelect(MouseEvent event) {
-		showcaseTeam("ANDBOX","/VLEAGUE Assets/large team icon/andbox-large.png", "jcStani", "vice", "yay", "seb", "mada",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png", "/VLEAGUE Assets/team icons/person-icon.png",
-				"/VLEAGUE Assets/team icons/person-icon.png");
+		showcaseTeam("ANDBOX","/resources/VLEAGUE Assets/large team icon/andbox-large.png", "jcStani", "vice", "yay", "seb", "mada",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png", "/resources/VLEAGUE Assets/team icons/person-icon.png",
+				"/resources/VLEAGUE Assets/team icons/person-icon.png");
 	}
 	
 	@FXML

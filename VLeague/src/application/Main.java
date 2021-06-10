@@ -22,7 +22,7 @@ public class Main extends Application {
 		stage.setTitle("VLeague Client");
 		stage.setScene(new Scene(root, 1280, 720));
 		stage.initStyle(StageStyle.UNDECORATED);
-		stage.getIcons().add(new Image(getClass().getResourceAsStream("/iconlogo.png")));
+		stage.getIcons().add(new Image(getClass().getResourceAsStream("/resources/iconlogo.png")));
 		primaryStage = stage;
 		primaryStage.show();
 		primaryStage.setX(screenRes.width/2-(primaryStage.getWidth()/2));

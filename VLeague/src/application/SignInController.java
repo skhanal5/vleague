@@ -146,7 +146,7 @@ public class SignInController implements Initializable {
 		loadWindow();
 		signInPane.setDisable(true);
 		loadingPane.setVisible(true);
-		RotateTransition rotation = new RotateTransition(Duration.seconds(1), loadingCircle);
+		RotateTransition rotation = new RotateTransition(Duration.seconds(1.3), loadingCircle);
 		rotation.setByAngle(360);
 		rotation.play();
 		rotation.setOnFinished(event -> {
@@ -260,7 +260,7 @@ public class SignInController implements Initializable {
 		dialogStage.setScene(scene);
 		dialogStage.initModality(Modality.APPLICATION_MODAL);
 		dialogStage.setTitle("VLeague Client");
-		dialogStage.getIcons().add(new Image(getClass().getResourceAsStream("/iconlogo.png")));
+		dialogStage.getIcons().add(new Image(getClass().getResourceAsStream("/resources/iconlogo.png")));
 		dialogStage.setX(Main.primaryStage.getX() + (Main.primaryStage.getWidth() / 2) - root.getPrefWidth() / 2);
 		dialogStage.setY(Main.primaryStage.getY() + (Main.primaryStage.getHeight() / 2) - root.getPrefHeight() / 2);
 		dialogStage.initOwner(Main.primaryStage);

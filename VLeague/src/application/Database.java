@@ -32,10 +32,10 @@ public class Database {
 		LocalDate now = LocalDate.now();
 		Document newUser = new Document();
 		newUser.append("username", username).append("email-address", emailAddress).append("password", hashedPassword).append("date-joined", now.format(DateTimeFormatter.ofPattern("MM/dd/yyyy")))
-		.append("icon-small", "/VLEAGUE Assets/small icons/jett-small-icon.png").append("icon-large", "/VLEAGUE Assets/large icons/jett-large-icon.png")
+		.append("icon-small", "/resources/VLEAGUE Assets/small icons/jett-small-icon.png").append("icon-large", "/resources/VLEAGUE Assets/large icons/jett-large-icon.png")
 		.append("gold-trophy", "0").append("silver-trophy", "0").append("bronze-trophy", "0")
-		.append("matches-played", "—").append("vp-earned", "—").append("global-rank", "—").append("top-finishes", "—").append("favorite-team", "—")
-		.append("music-volume", 1.0).append("fx-volume", 1.0).append("team-selected", false).append("current-team", "n/a");
+		.append("matches-played", "â€”").append("vp-earned", "â€”").append("global-rank", "â€”").append("top-finishes", "â€”").append("favorite-team", "â€”")
+		.append("music-volume", 0.25).append("fx-volume", 0.5).append("team-selected", false).append("current-team", "n/a");
 		users.insertOne(newUser);
 	}
 	

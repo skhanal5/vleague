@@ -44,17 +44,17 @@
                      <children>
                         <ImageView fitHeight="817.0" fitWidth="1528.0" layoutX="-51.0" opacity="0.37" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                            <image>
-                              <Image url="@../../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
+                              <Image url="@../resources/VLEAGUE%20Assets/e52d573ea72014060136bea750762d6e.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="720.0" fitWidth="1281.0" layoutX="-1.0" layoutY="-59.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/VLEAGUE%20Assets/info-panel-blur.png" />
+                              <Image url="@../resources/VLEAGUE%20Assets/info-panel-blur.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="720.0" fitWidth="1280.0" layoutY="-63.0" opacity="0.37" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
+                              <Image url="@../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
                            </image>
                         </ImageView>
                         <Pane fx:id="homePane1" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel">
@@ -62,7 +62,7 @@
                               <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../resources/VLEAGUE%20Assets/slide1.png" />
+                                    <Image url="@../resources/VLEAGUE%20Assets/slide1.png" />
                                  </image>
                               </ImageView>
                               <Rectangle fill="#fa4655" height="4.0" layoutX="32.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
@@ -106,7 +106,7 @@
                               </Rectangle>
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../resources/VLEAGUE%20Assets/slide2.png" />
+                                    <Image url="@../resources/VLEAGUE%20Assets/slide2.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="67.0" layoutY="4.0" styleClass="slideshow-text" text="CLIMB THE RANKS" textFill="WHITE">
@@ -120,7 +120,7 @@
                            <children>
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../resources/VLEAGUE%20Assets/slide3.png" />
+                                    <Image url="@../resources/VLEAGUE%20Assets/slide3.png" />
                                  </image>
                               </ImageView>
                               <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
@@ -164,7 +164,7 @@
                            <children>
                               <ImageView fitHeight="720.0" fitWidth="1297.0" layoutX="431.0" layoutY="383.0" opacity="0.1" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                  <image>
-                                    <Image url="@../../resources/VLEAGUE%20Assets/MyTeam%20bg.png" />
+                                    <Image url="@../resources/VLEAGUE%20Assets/MyTeam%20bg.png" />
                                  </image>
                               </ImageView>
                               <Label focusTraversable="false" layoutX="959.0" layoutY="426.0" styleClass="header-label" text="TEAM SELECT" textFill="WHITE" />
@@ -174,7 +174,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/tsm-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/tsm-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -183,7 +183,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/100t-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/100t-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -192,7 +192,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/c9-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/c9-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -201,7 +201,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/sen-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/sen-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -210,7 +210,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/faze-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/faze-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -219,7 +219,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/geng-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/geng-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -228,7 +228,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/envy-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/envy-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -237,7 +237,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/lg-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/lg-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -250,7 +250,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/xset-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/xset-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -259,7 +259,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/nrg-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/nrg-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -268,7 +268,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/t1-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/t1-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -277,7 +277,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/v1-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/v1-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -286,7 +286,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/andbox-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/andbox-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -295,7 +295,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/rng-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/rng-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -304,7 +304,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/bbg-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/bbg-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -313,7 +313,7 @@
                                        <graphic>
                                           <ImageView fitHeight="73.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/imt-logo.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/imt-logo.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -326,7 +326,7 @@
                                        <graphic>
                                           <ImageView fx:id="playerOnePic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -335,7 +335,7 @@
                                        <graphic>
                                           <ImageView fx:id="playerTwoPic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -344,7 +344,7 @@
                                        <graphic>
                                           <ImageView fx:id="playerThreePic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -353,7 +353,7 @@
                                        <graphic>
                                           <ImageView fx:id="playerFourPic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -362,7 +362,7 @@
                                        <graphic>
                                           <ImageView fx:id="playerFivePic" fitHeight="58.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
+                                                <Image url="@../resources/VLEAGUE%20Assets/team%20icons/person-icon.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
@@ -454,7 +454,7 @@
                                  <children>
                                     <ImageView fitHeight="1751.0" fitWidth="1311.0" layoutX="-6.0" layoutY="-6.0" opacity="0.05" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
-                                          <Image url="@../../resources/VLEAGUE%20Assets/schedule%20bg.png" />
+                                          <Image url="@../resources/VLEAGUE%20Assets/schedule%20bg.png" />
                                        </image>
                                     </ImageView>
                                     <Label focusTraversable="false" layoutX="484.0" layoutY="45.0" styleClass="header-label" text="2021 SEASON OVERVIEW" textFill="WHITE">
@@ -520,7 +520,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 1" textFill="WHITE">
@@ -577,7 +577,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 2" textFill="WHITE">
@@ -634,7 +634,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="14.0" text="Champions Tour North America: Challengers 3" textFill="WHITE">
@@ -691,7 +691,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="219.0" layoutY="13.0" text="Masters: First Strike" textFill="WHITE">
@@ -765,7 +765,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 1" textFill="WHITE">
@@ -823,7 +823,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 2" textFill="WHITE">
@@ -881,7 +881,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 3" textFill="WHITE">
@@ -939,7 +939,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="226.0" layoutY="13.0" text="Masters: Reykjavík" textFill="WHITE">
@@ -1013,7 +1013,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 1" textFill="WHITE">
@@ -1071,7 +1071,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 2" textFill="WHITE">
@@ -1129,7 +1129,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="137.0" layoutY="13.0" text="Champions Tour North America: Challengers 3" textFill="WHITE">
@@ -1187,7 +1187,7 @@
                                                    <children>
                                                       <ImageView fitHeight="60.0" fitWidth="50.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/MS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                       <Label layoutX="240.0" layoutY="13.0" text="Masters: Berlin" textFill="WHITE">
@@ -1256,7 +1256,7 @@
                                                    <children>
                                                       <ImageView fitHeight="95.0" fitWidth="321.0" layoutX="165.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/CHAMPIONS%20LOGO.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/CHAMPIONS%20LOGO.png" />
                                                          </image>
                                                       </ImageView>
                                                    </children>
@@ -1285,7 +1285,7 @@
                               </Pane>
                               <ImageView fitHeight="1131.0" fitWidth="1748.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                  <image>
-                                    <Image url="@../../resources/VLEAGUE%20Assets/gradient%202.png" />
+                                    <Image url="@../resources/VLEAGUE%20Assets/gradient%202.png" />
                                  </image>
                               </ImageView>
                               <FontIcon fill="WHITE" iconColor="#fa4454" iconLiteral="fa-warning" iconSize="50" layoutX="624.0" layoutY="252.0" wrappingWidth="51.0" />
@@ -1312,7 +1312,7 @@
                                  <children>
                                     <ImageView fitHeight="1131.0" fitWidth="1748.0" layoutY="4.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
-                                          <Image url="@../../resources/VLEAGUE%20Assets/gradient%202.png" />
+                                          <Image url="@../resources/VLEAGUE%20Assets/gradient%202.png" />
                                        </image>
                                     </ImageView>
                                     <Label layoutX="559.0" layoutY="45.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
@@ -1326,7 +1326,7 @@
                                                    </font></Label>
                                                 <ImageView fx:id="leftLogo1" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam1" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1340,7 +1340,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo1" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date1" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1362,7 +1362,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo2" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam2" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1377,7 +1377,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo2" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date2" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1401,7 +1401,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo3" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam3" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1416,7 +1416,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo3" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date3" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1440,7 +1440,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo4" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam4" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1455,7 +1455,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo4" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date4" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1479,7 +1479,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo5" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam5" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1494,7 +1494,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo5" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date5" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1518,7 +1518,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo6" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam6" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1533,7 +1533,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo6" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date6" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1557,7 +1557,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo7" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam7" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1572,7 +1572,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo7" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date7" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1596,7 +1596,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo8" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam8" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1611,7 +1611,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo8" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date8" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1635,7 +1635,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo9" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam9" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1650,7 +1650,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo9" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date9" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1674,7 +1674,7 @@
                                                 </Label>
                                                 <ImageView fx:id="leftLogo10" fitHeight="73.0" fitWidth="66.0" layoutX="300.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Label fx:id="leftTeam10" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
@@ -1689,7 +1689,7 @@
                                                 </Label>
                                                 <ImageView fx:id="rightLogo10" fitHeight="73.0" fitWidth="66.0" layoutX="440.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
+                                                      <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
                                                 <Text fx:id="date10" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
@@ -1728,7 +1728,7 @@
                                  <children>
                                     <ImageView fitHeight="1237.0" fitWidth="1339.0" opacity="0.11" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
-                                          <Image url="@../../resources/VLEAGUE%20Assets/gradient%20large%202.png" />
+                                          <Image url="@../resources/VLEAGUE%20Assets/gradient%20large%202.png" />
                                        </image>
                                     </ImageView>
                                     <Pane fx:id="leaderboardPane" layoutX="320.0" layoutY="150.0" prefHeight="980.0" prefWidth="748.0" style="-fx-background-radius: 15; -fx-background-color: #1b2734; -fx-border-color: rgba(255,255,255,.01); -fx-border-radius: 15 15 15 15;">
@@ -1739,7 +1739,7 @@
                                                    <children>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1766,7 +1766,7 @@
                                                    <children>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/jett-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/jett-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1793,7 +1793,7 @@
                                                    <children>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/raze-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/raze-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1829,7 +1829,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/omen-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/omen-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1860,7 +1860,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/skye-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/skye-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1891,7 +1891,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/sage-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/sage-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1922,7 +1922,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/sova-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/sova-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1953,7 +1953,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/jett-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/jett-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -1984,7 +1984,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/killjoy-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/killjoy-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2015,7 +2015,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/phoenix-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/phoenix-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2046,7 +2046,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/brim-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/brim-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2077,7 +2077,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/skye-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/brim-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2108,7 +2108,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/killjoy-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/killjoy-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2139,7 +2139,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2170,7 +2170,7 @@
                                                       </Label>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/reyna-small-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/small%20icons/reyna-small-icon.png" />
                                                          </image>
                                                          <effect>
                                                             <DropShadow />
@@ -2404,7 +2404,7 @@
                                  <children>
                                     <ImageView fx:id="largeUserIcon" fitHeight="389.0" fitWidth="335.0" layoutX="-17.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
                                        <image>
-                                          <Image url="@../../resources/VLEAGUE%20Assets/large%20icons/jett-large-icon.png" />
+                                          <Image url="@../resources/VLEAGUE%20Assets/large%20icons/jett-large-icon.png" />
                                        </image>
                                        <effect>
                                           <DropShadow />
@@ -2437,7 +2437,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/viper-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/viper-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2446,7 +2446,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/brim-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/brim-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2455,7 +2455,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/cypher-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/cypher-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2464,7 +2464,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/killjoy-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/killjoy-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2473,7 +2473,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/phoenix-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/phoenix-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2482,7 +2482,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/raze-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/raze-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2491,7 +2491,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="198.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../bin/VLEAGUE%20Assets/medium%20icons/jett-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/jett-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2500,7 +2500,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/reyna-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/reyna-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2509,7 +2509,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/sova-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/sova-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2518,7 +2518,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/sky-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/sky-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2527,7 +2527,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/sage-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/sage-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2536,7 +2536,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/omen-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/omen-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2545,7 +2545,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/yoru-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/yoru-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2554,7 +2554,7 @@
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="@../../resources/VLEAGUE%20Assets/medium%20icons/breach-med-icon.png" />
+                                                            <Image url="@../resources/VLEAGUE%20Assets/medium%20icons/breach-med-icon.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -2572,7 +2572,7 @@
                                  <children>
                                     <ImageView fx:id="previewUserIcon" fitHeight="389.0" fitWidth="335.0" layoutX="-17.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../resources/VLEAGUE%20Assets/large%20icons/jett-large-icon.png" />
+                                          <Image url="@../resources/VLEAGUE%20Assets/large%20icons/jett-large-icon.png" />
                                        </image>
                                        <effect>
                                           <DropShadow />
@@ -2614,7 +2614,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/VLEAGUE%20Assets/VLEAGUE.png" />
+                  <Image url="@../resources/VLEAGUE%20Assets/VLEAGUE.png" />
                </image>
                <effect>
                   <DropShadow />
@@ -2628,7 +2628,7 @@
          <children>
             <ImageView fx:id="smallUserIcon" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
+                  <Image url="@../resources/VLEAGUE%20Assets/small%20icons/cypher-small-icon.png" />
                </image>
                <HBox.margin>
                   <Insets bottom="2.0" right="15.0" top="3.0" />

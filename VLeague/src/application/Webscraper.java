@@ -24,67 +24,67 @@ public class Webscraper {
 		
 		if (teamName.equals("TEAM SOLOMID")) {
 			hyperlink = "https://www.vlr.gg/team/matches/106/tsm/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/tsm-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/tsm-logo.png";
 			formattedName = "TSM";
 		} else if (teamName.equals("100 THIEVES")) {
 			hyperlink = "https://www.vlr.gg/team/matches/120/100-thieves/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/100tlogo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/100tlogo.png";
 			formattedName = "100 Thieves";
 		} else if (teamName.equals("CLOUD 9")) {
 			hyperlink = "https://www.vlr.gg/team/matches/188/cloud9-blue/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/c9-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/c9-logo.png";
 			formattedName = "Cloud 9";
 		} else if (teamName.equals("SENTINELS")) {
 			hyperlink = "https://www.vlr.gg/team/matches/2/sentinels/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/sen-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/sen-logo.png";
 			formattedName = "Sentinels";
 		} else if (teamName.equals("ENVY")) {
 			hyperlink = "https://www.vlr.gg/team/matches/427/envy/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/t1-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/t1-logo.png";
 			formattedName = "Envy";
 		} else if (teamName.equals("LUMINOSITY GAMING")) {
 			hyperlink = "https://www.vlr.gg/team/matches/642/luminosity/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/lg-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/lg-logo.png";
 			formattedName = "Luminosity";
 		} else if (teamName.equals("FAZE CLAN")) {
 			hyperlink = "https://www.vlr.gg/team/matches/337/faze-clan/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/faze-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/faze-logo.png";
 			formattedName = "FaZe Clan";
 		} else if (teamName.equals("XSET GAMING")) {
 			hyperlink = "https://www.vlr.gg/team/matches/533/xset/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/xset-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/xset-logo.png";
 			formattedName = "XSET";
 		} else if (teamName.equals("NRG GAMING")) {
 			hyperlink = "https://www.vlr.gg/team/matches/1034/nrg-esports/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/nrg-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/nrg-logo.png";
 			formattedName = "NRG Esports";
 		} else if (teamName.equals("IMMORTALS")) {
 			hyperlink = "https://www.vlr.gg/team/matches/103/immortals/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/imt-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/imt-logo.png";
 			formattedName = "Immortals";
 		} else if (teamName.equals("T1 ESPORTS")) {
 			hyperlink = "https://www.vlr.gg/team/matches/14/t1/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/tsm-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/tsm-logo.png";
 			formattedName = "T1";
 		} else if (teamName.equals("VERSION 1")) {
 			hyperlink = "https://www.vlr.gg/team/matches/2815/version1/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/v1-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/v1-logo.png";
 			formattedName = "Version 1";
 		} else if (teamName.equals("RENEGADES")) {
 			hyperlink = "https://www.vlr.gg/team/matches/468/renegades/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/rng-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/rng-logo.png";
 			formattedName = "Renegades";
 		} else if (teamName.equals("BUILT BY GAMERS")) {
 			hyperlink = "https://www.vlr.gg/team/matches/473/built-by-gamers/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/bbg-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/bbg-logo.png";
 			formattedName = "Built By Gamers";
 		} else if (teamName.equals("GEN.G")){
 			hyperlink = "https://www.vlr.gg/team/matches/17/gen-g/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/geng-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/geng-logo.png";
 			formattedName = "Gen.G";
 		} else {
 			hyperlink = "https://www.vlr.gg/team/matches/856/andbox/?group=completed";
-			imageLink = "/VLEAGUE Assets/team icons/andbox-logo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/andbox-logo.png";
 			formattedName = "Andbox";
 		}
 
@@ -272,39 +272,39 @@ public class Webscraper {
 	
 	public String determineTeam(String teamName) {
 		if (teamName.equals("TSM")) {
-			return "/VLEAGUE Assets/team icons/tsm-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/tsm-logo.png";
 		} else if (teamName.equals("100 Thieves")) {
-			return "/VLEAGUE Assets/team icons/100t-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/100t-logo.png";
 		} else if (teamName.equals("Cloud9 Blue")) {
-			return "/VLEAGUE Assets/team icons/c9-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/c9-logo.png";
 		} else if (teamName.equals("Sentinels")) {
-			return "/VLEAGUE Assets/team icons/sen-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/sen-logo.png";
 		} else if (teamName.equals("Envy")) {
-			return "/VLEAGUE Assets/team icons/envy-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/envy-logo.png";
 		} else if (teamName.equals("Luminosity")) {
-			return "/VLEAGUE Assets/team icons/lg-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/lg-logo.png";
 		} else if (teamName.equals("FaZe Clan")) {
-			return "/VLEAGUE Assets/team icons/faze-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/faze-logo.png";
 		} else if (teamName.equals("XSET")) {
-			return "/VLEAGUE Assets/team icons/xset-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/xset-logo.png";
 		} else if (teamName.equals("NRG Esports")) {
-			return "/VLEAGUE Assets/team icons/nrg-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/nrg-logo.png";
 		} else if (teamName.equals("Immortals")) {
-			return "/VLEAGUE Assets/team icons/imt-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/imt-logo.png";
 		} else if (teamName.equals("T1")) {
-			return "/VLEAGUE Assets/team icons/t1-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/t1-logo.png";
 		} else if (teamName.equals("Version1")) {
-			return "/VLEAGUE Assets/team icons/v1-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/v1-logo.png";
 		} else if (teamName.equals("Renegades")) {
-			return "/VLEAGUE Assets/team icons/rng-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/rng-logo.png";
 		} else if (teamName.equals("Built By Gamers")) {
-			return "/VLEAGUE Assets/team icons/bbg-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/bbg-logo.png";
 		} else if (teamName.equals("Gen.G")){
-			return "/VLEAGUE Assets/team icons/geng-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/geng-logo.png";
 		} else if (teamName.equals("Andbox")){
-			return "/VLEAGUE Assets/team icons/andbox-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/andbox-logo.png";
 		} else {
-			return "/VLEAGUE Assets/team icons/vl-generic-logo.png";
+			return "/resources/VLEAGUE Assets/team icons/vl-generic-logo.png";
 		}
 	}
 }
