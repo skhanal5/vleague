@@ -74,7 +74,7 @@
                   <FontIcon caretBias="false" disable="${loginButton.disable}" iconColor="WHITE" iconLiteral="fa-arrow-right" iconSize="35" styleClass="login-icon" />
                </graphic>
                <effect>
-                  <DropShadow height="12.1" radius="4.0675" width="6.17" />
+                  <DropShadow height="38.79" radius="13.705" width="18.03" />
                </effect>
             </Button>
             <JFXCheckBox checkedColor="#fa4454" layoutX="61.0" layoutY="360.0" styleClass="custom-jfx-check-box" stylesheets="@application.css" text="Stay signed in" textFill="#1b2734" unCheckedColor="#1b2734">

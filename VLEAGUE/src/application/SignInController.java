@@ -146,8 +146,8 @@ public class SignInController implements Initializable {
 		loadWindow();
 		signInPane.setDisable(true);
 		loadingPane.setVisible(true);
-		RotateTransition rotation = new RotateTransition(Duration.seconds(1.3), loadingCircle);
-		rotation.setByAngle(360);
+		RotateTransition rotation = new RotateTransition(Duration.seconds(2), loadingCircle);
+		rotation.setByAngle(720);
 		rotation.play();
 		rotation.setOnFinished(event -> {
 			loadingPane.setVisible(false);

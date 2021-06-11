@@ -179,7 +179,26 @@ public class GameController implements Initializable{
 	private Label playerFive;
 	
 	@FXML
+	private Label playerOneTitle;
+	
+	@FXML
+	private Label playerTwoTitle;
+	
+	@FXML
+	private Label playerThreeTitle;
+	
+	@FXML
+	private Label playerFourTitle;
+	
+	@FXML
+	private Label playerFiveTitle;
+	
+	
+	@FXML
 	private Label myTeamHeader;
+	
+	@FXML
+	private ImageView headerImage;
 	
 	@FXML
 	private Text date1;
@@ -650,11 +669,129 @@ public class GameController implements Initializable{
 		rotation.setOnFinished(event -> {
 			myTeamLoad.setVisible(false);
 			myTeamPane.setVisible(true);
-			myTeamHeader.setText(Main.database.getMyTeam(username.getText()));
+			determineTeam(myTeamHeader, playerOneTitle, playerTwoTitle, playerThreeTitle, playerFourTitle, playerFiveTitle);
 		});
 	}
 	
-	public void resultLoad() {		
+	private void determineTeam(Label header, Label title1, Label title2, Label title3, Label title4, Label title5) {
+		String team = Main.database.getMyTeam(username.getText());
+		myTeamHeader.setText(team);
+		if (team.equals("TEAM SOLOMID")) {
+			playerOneTitle.setText("WARDELL");
+			playerTwoTitle.setText("hazed");
+			playerThreeTitle.setText("Drone");
+			playerFourTitle.setText("Subroza");
+			playerFiveTitle.setText("brax");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/tsm-logo.png")));
+		} else if (team.equals("100 THIEVES")) {
+			playerOneTitle.setText("Hiko");
+			playerTwoTitle.setText("Ethan");
+			playerThreeTitle.setText("Asuna");
+			playerFourTitle.setText("nitr0");
+			playerFiveTitle.setText("steel");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/100t-logo.png")));
+		} else if (team.equals("CLOUD 9")) {
+			playerOneTitle.setText("leaf");
+			playerTwoTitle.setText("xeta");
+			playerThreeTitle.setText("poiz");
+			playerFourTitle.setText("mitch");
+			playerFiveTitle.setText("floppy");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/c9-logo.png")));
+		} else if (team.equals("SENTINELS")) {
+			playerOneTitle.setText("TenZ");
+			playerTwoTitle.setText("ShahZam");
+			playerThreeTitle.setText("SicK");
+			playerFourTitle.setText("zombs");
+			playerFiveTitle.setText("dapr");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/sen-logo.png")));
+		} else if (team.equals("ENVY")) {
+			playerOneTitle.setText("Victor");
+			playerTwoTitle.setText("crashies");
+			playerThreeTitle.setText("FNS");
+			playerFourTitle.setText("mummAy");
+			playerFiveTitle.setText("kaboose");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/envy-logo.png")));
+		} else if (team.equals("LUMINOSITY GAMING")) {
+			playerOneTitle.setText("aproto");
+			playerTwoTitle.setText("stellar");
+			playerThreeTitle.setText("thief");
+			playerFourTitle.setText("YaBoiDre");
+			playerFiveTitle.setText("moose");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/lg-logo.png")));
+		} else if (team.equals("FAZE CLAN")) {
+			playerOneTitle.setText("ZachaREEE");
+			playerTwoTitle.setText("BABYBAY");
+			playerThreeTitle.setText("Marved");
+			playerFourTitle.setText("Rawkus");
+			playerFiveTitle.setText("corey");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/faze-logo.png")));
+		} else if (team.equals("XSET GAMING")) {
+			playerOneTitle.setText("PureR");
+			playerTwoTitle.setText("AYRIN");
+			playerThreeTitle.setText("WeDid");
+			playerFourTitle.setText("BcJ");
+			playerFiveTitle.setText("twhifo");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/xset-logo.png")));
+		} else if (team.equals("NRG GAMING")) {
+			playerOneTitle.setText("ANDROID");
+			playerTwoTitle.setText("eeiu");
+			playerThreeTitle.setText("s0m");
+			playerFourTitle.setText("daps");
+			playerFiveTitle.setText("tex");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/nrg-logo.png")));
+		} else if (team.equals("IMMORTALS")) {
+			playerOneTitle.setText("N/A");
+			playerTwoTitle.setText("Kehmicals");
+			playerThreeTitle.setText("jcStani");
+			playerFourTitle.setText("Genghsta");
+			playerFiveTitle.setText("ShoT_UP");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/imt-logo.png")));
+		} else if (team.equals("T1 ESPORTS")) {
+			playerOneTitle.setText("autimatic");
+			playerTwoTitle.setText("curry");
+			playerThreeTitle.setText("Skadoodle");
+			playerFourTitle.setText("Spyder");
+			playerFiveTitle.setText("DaZeD");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/t1-logo.png")));
+		} else if (team.equals("VERSION 1")) {
+			playerOneTitle.setText("vanity");
+			playerTwoTitle.setText("effys");
+			playerThreeTitle.setText("Zellsis");
+			playerFourTitle.setText("penny");
+			playerFiveTitle.setText("wippie");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/v1-logo.png")));
+		} else if (team.equals("RENEGADES")) {
+			playerOneTitle.setText("Stronglegs");
+			playerTwoTitle.setText("cp2");
+			playerThreeTitle.setText("randyySAVAGE");
+			playerFourTitle.setText("Winsum");
+			playerFiveTitle.setText("RetrQ");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/rng-logo.png")));
+		} else if (team.equals("BUILT BY GAMERS")) {
+			playerOneTitle.setText("Poach");
+			playerTwoTitle.setText("rarkar");
+			playerThreeTitle.setText("Critical");
+			playerFourTitle.setText("Bjor");
+			playerFiveTitle.setText("Will");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/bbg-logo.png")));
+		} else if (team.equals("GEN.G")){
+			playerOneTitle.setText("huynh");
+			playerTwoTitle.setText("Mkael");
+			playerThreeTitle.setText("gMd");
+			playerFourTitle.setText("koosta");
+			playerFiveTitle.setText("Shawn");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/geng-logo.png")));
+		} else {
+			playerOneTitle.setText("jcStani");
+			playerTwoTitle.setText("vice");
+			playerThreeTitle.setText("yay");
+			playerFourTitle.setText("seb");
+			playerFiveTitle.setText("mada");
+			headerImage.setImage(new Image (getClass().getResourceAsStream("/resources/VLEAGUE Assets/team icons/andbox-logo.png")));
+		}
+	}
+	
+	private void resultLoad() {		
 		resultDefaultScreen.setVisible(false);
 		resultDefaultScreen.setDisable(true);
 		resultLoadScreen.setVisible(true);

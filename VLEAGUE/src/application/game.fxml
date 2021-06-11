@@ -415,28 +415,89 @@
                         </AnchorPane>
                         <AnchorPane fx:id="myTeamPane" prefHeight="661.0" prefWidth="1280.0" visible="false">
                            <children>
-                              <Label fx:id="myTeamHeader" alignment="CENTER" focusTraversable="false" layoutX="430.0" layoutY="45.0" prefHeight="70.0" prefWidth="421.0" styleClass="header-label" textFill="WHITE" />
-                              <HBox layoutX="120.0" layoutY="163.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="1041.0" spacing="10.0">
+                              <ImageView fitHeight="720.0" fitWidth="1297.0" opacity="0.1" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                 <image>
+                                    <Image url="@../resources/VLEAGUE%20Assets/MyTeam%20bg.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="headerImage" fitHeight="75.0" fitWidth="75.0" layoutX="603.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/VLEAGUE%20Assets/team%20icons/faze-logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="myTeamHeader" alignment="CENTER" focusTraversable="false" layoutX="457.0" layoutY="94.0" prefHeight="70.0" prefWidth="367.0" styleClass="header-label" text="LUMINOSITY GAMING" textFill="WHITE" />
+                              <HBox layoutX="120.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="1041.0" spacing="10.0">
                                  <children>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
                                           <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                          <Label fx:id="playerOneTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player One" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                             </image>
+                                          </ImageView>
                                        </children></Pane>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
                                           <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                          <Label fx:id="playerTwoTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Two" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
+                                       <children>
+                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                          <Label fx:id="playerThreeTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Three" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                             </image>
+                                          </ImageView>
                                        </children></Pane>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
                                           <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                          <Label fx:id="playerFourTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Four" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                             </image>
+                                          </ImageView>
                                        </children></Pane>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
+                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
                                           <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
-                                       </children></Pane>
-                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="335.0" prefWidth="200.0" styleClass="player-icon">
-                                       <children>
-                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
+                                          <Label fx:id="playerFiveTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Five" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                             </image>
+                                          </ImageView>
                                        </children></Pane>
                                  </children>
                               </HBox>
@@ -1275,7 +1336,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1003.0">
                      <children>
-                        <AnchorPane fx:id="resultDefaultScreen" prefHeight="662.0" prefWidth="1280.0" style="-fx-background-color: #0f1923;">
+                        <AnchorPane fx:id="resultDefaultScreen" prefHeight="662.0" prefWidth="1280.0" style="-fx-background-color: #0f1923;" visible="false">
                            <children>
                               <Label layoutX="505.0" layoutY="42.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
                               <Pane blendMode="OVERLAY" layoutX="291.0" layoutY="150.0" prefHeight="322.0" prefWidth="716.0" style="-fx-background-color: #0f1923;">
@@ -1306,7 +1367,7 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <ScrollPane fx:id="resultsScroll" disable="true" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS" visible="false">
+                        <ScrollPane fx:id="resultsScroll" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
                            <content>
                               <AnchorPane onScroll="#onStreamScrolling" prefHeight="975.0" prefWidth="1453.0" style="-fx-background-color: #0f1923;">
                                  <children>
@@ -1320,7 +1381,7 @@
                                        <children>
                                           <Pane prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
-                                                <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
+                                                <Label layoutX="395.0" layoutY="26.0" text="VS" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="12.0" />
                                                    </font></Label>
@@ -1329,7 +1390,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam1" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam1" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font></Label>
@@ -1365,7 +1426,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam2" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam2" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1404,7 +1465,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam3" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam3" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1443,7 +1504,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam4" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam4" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1482,7 +1543,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam5" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam5" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1521,7 +1582,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam6" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam6" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1560,7 +1621,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam7" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam7" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1599,7 +1660,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam8" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam8" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1638,7 +1699,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam9" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam9" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>
@@ -1677,7 +1738,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Label fx:id="leftTeam10" layoutX="201.0" layoutY="21.0" text="Team A" textFill="WHITE">
+                                                <Label fx:id="leftTeam10" layoutX="188.0" layoutY="21.0" text="Team A" textFill="WHITE">
                                                    <font>
                                                       <Font name="System Bold" size="18.0" />
                                                    </font>

@@ -25,7 +25,7 @@ public class Webscraper {
 		if (teamName.equals("TEAM SOLOMID")) {
 			hyperlink = "https://www.vlr.gg/team/matches/106/tsm/?group=completed";
 			imageLink = "/resources/VLEAGUE Assets/team icons/tsm-logo.png";
-			formattedName = "TSM";
+			formattedName = "Team Solomid";
 		} else if (teamName.equals("100 THIEVES")) {
 			hyperlink = "https://www.vlr.gg/team/matches/120/100-thieves/?group=completed";
 			imageLink = "/resources/VLEAGUE Assets/team icons/100tlogo.png";
@@ -53,7 +53,7 @@ public class Webscraper {
 		} else if (teamName.equals("XSET GAMING")) {
 			hyperlink = "https://www.vlr.gg/team/matches/533/xset/?group=completed";
 			imageLink = "/resources/VLEAGUE Assets/team icons/xset-logo.png";
-			formattedName = "XSET";
+			formattedName = "XSET Gaming";
 		} else if (teamName.equals("NRG GAMING")) {
 			hyperlink = "https://www.vlr.gg/team/matches/1034/nrg-esports/?group=completed";
 			imageLink = "/resources/VLEAGUE Assets/team icons/nrg-logo.png";
@@ -64,8 +64,8 @@ public class Webscraper {
 			formattedName = "Immortals";
 		} else if (teamName.equals("T1 ESPORTS")) {
 			hyperlink = "https://www.vlr.gg/team/matches/14/t1/?group=completed";
-			imageLink = "/resources/VLEAGUE Assets/team icons/tsm-logo.png";
-			formattedName = "T1";
+			imageLink = "/resources/VLEAGUE Assets/team icons/t1-logo.png";
+			formattedName = "T1 Esports";
 		} else if (teamName.equals("VERSION 1")) {
 			hyperlink = "https://www.vlr.gg/team/matches/2815/version1/?group=completed";
 			imageLink = "/resources/VLEAGUE Assets/team icons/v1-logo.png";

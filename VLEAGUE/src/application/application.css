@@ -579,3 +579,15 @@
 .results-pane:hover{
     -fx-background-color: rgba(255,255,255,.03);
 }
+
+.player-pane{
+	-fx-border-width:1.5;
+	-fx-border-color: rgba(255,255,255,.2);
+	-fx-background-color: rgba(255,255,255,.05);
+}
+
+.player-pane:hover{
+	-fx-background-color: rgba(255,255,255,.1);
+	-fx-border-color: rgba(255,255,255,.5);
+	-fx-cursor:hand;
+}
