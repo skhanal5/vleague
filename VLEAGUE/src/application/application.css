@@ -371,12 +371,12 @@
 }
 
 .settings-panels:hover{
-	-fx-background-color:#dcdada;
+	-fx-background-color:rgba(255,255,255,.1);
 	-fx-cursor:hand;
 }
 
 .audio-settings:hover{
-	-fx-background-color:#dcdada;
+	-fx-background-color:rgba(255,255,255,.1);
 }
 
 .audio-sliders>.thumb{

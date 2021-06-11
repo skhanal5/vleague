@@ -35,9 +35,19 @@ public class Database {
 		.append("icon-small", "/resources/VLEAGUE Assets/small icons/jett-small-icon.png").append("icon-large", "/resources/VLEAGUE Assets/large icons/jett-large-icon.png")
 		.append("gold-trophy", "0").append("silver-trophy", "0").append("bronze-trophy", "0")
 		.append("matches-played", "—").append("vp-earned", "—").append("global-rank", "—").append("top-finishes", "—").append("favorite-team", "—")
-		.append("music-volume", 0.25).append("fx-volume", 0.5).append("team-selected", false).append("current-team", "n/a");
+		.append("music-volume", 0.25).append("fx-volume", 0.5).append("team-selected", false).append("current-team", "n/a").append("dark-mode", false);
 		users.insertOne(newUser);
 	}
+	
+	public void setDarkLightMode(String user) {
+		Boolean value = this.getDarkOrLight(user);
+		if (value==false) {
+			users.updateOne(Filters.in("username", user), Updates.set("dark-mode", true));
+		} else {
+			users.updateOne(Filters.in("username", user), Updates.set("dark-mode", false));
+		}
+	}
+	
 	
 	//stores large and small icon for user profile
 	public void setIcon(String user, String smallIcon, String largeIcon) {
@@ -149,6 +159,12 @@ public class Database {
 	public double getFXVolume(String username) {
 		Document d = users.find(Filters.in("username", username)).first();
 		return d.getDouble("fx-volume");
+	}
+	
+	//retrieves music volume setting for user
+	public Boolean getDarkOrLight(String username) {
+		Document d = users.find(Filters.in("username", username)).first();
+		return d.getBoolean("dark-mode");
 	}
 	
 	//retrieves hashed password for validation

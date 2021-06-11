@@ -871,6 +871,7 @@ public class GameController implements Initializable{
 		dialogStage.setY(Main.primaryStage.getY() + (Main.primaryStage.getHeight() / 2) - root.getPrefHeight() / 2);
 		SettingsController controller = loader.getController();
         controller.setAccountInfo(username.getText());
+        controller.setTheme(username.getText());
 		dialogStage.initOwner(Main.primaryStage);
         dialogStage.showAndWait();
 	}

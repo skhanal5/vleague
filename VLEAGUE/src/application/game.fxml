@@ -513,9 +513,9 @@
                            <content>
                               <AnchorPane onScroll="#onScheduleScrolling" prefHeight="1751.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
                                  <children>
-                                    <ImageView fitHeight="1751.0" fitWidth="1311.0" layoutX="-6.0" layoutY="-6.0" opacity="0.05" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                    <ImageView fitHeight="1751.0" fitWidth="1311.0" layoutX="-6.0" layoutY="-6.0" opacity="0.09" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
-                                          <Image url="@../resources/VLEAGUE%20Assets/schedule%20bg.png" />
+                                          <Image url="@../resources/VLEAGUE%20Assets/VLEAGUE%20Banner.png" />
                                        </image>
                                     </ImageView>
                                     <Label focusTraversable="false" layoutX="484.0" layoutY="45.0" styleClass="header-label" text="2021 SEASON OVERVIEW" textFill="WHITE">
@@ -536,7 +536,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="174.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="232.0" prefHeight="313.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" prefHeight="140.0" prefWidth="688.0">
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -593,7 +593,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -624,7 +624,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="282.0" layoutY="12.0" text="FEB 11-FEB 23" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -650,7 +650,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -681,7 +681,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="282.0" layoutY="12.0" text="FEB 25-MAR 7" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -707,7 +707,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -733,12 +733,12 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                            <Label layoutX="151.0" layoutY="12.0" text="\$150,000" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="277.0" layoutY="12.0" text="MAR 11-MAR 21" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -780,7 +780,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="611.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="668.0" prefHeight="313.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -811,7 +811,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="282.0" layoutY="12.0" text="APR 1-APR 11" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -838,7 +838,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -869,7 +869,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="280.0" layoutY="12.0" text="APR 15-APR 25" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -896,7 +896,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -927,7 +927,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="280.0" layoutY="12.0" text="APR 29-MAY 2" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -954,7 +954,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -980,12 +980,12 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                            <Label layoutX="151.0" layoutY="12.0" text="\$600,000" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="280.0" layoutY="12.0" text="MAY 24-MAY 30" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1028,7 +1028,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="1047.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="1104.0" prefHeight="313.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1049,7 +1049,7 @@
                                                                   <Font name="System Bold" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                            <Label layoutY="12.0" text="UPCOMING" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1059,7 +1059,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="305.0" layoutY="12.0" text="TBD" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1086,7 +1086,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1107,7 +1107,7 @@
                                                                   <Font name="System Bold" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                            <Label layoutY="12.0" text="UPCOMING" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1117,7 +1117,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="305.0" layoutY="12.0" text="TBD" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1144,7 +1144,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane-colored" animated="false" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1165,7 +1165,7 @@
                                                                   <Font name="System Bold" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                            <Label layoutY="12.0" text="UPCOMING" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1175,7 +1175,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="305.0" layoutY="12.0" text="TBD" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1202,7 +1202,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" animated="false" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1223,17 +1223,17 @@
                                                                   <Font name="System Bold" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutY="12.0" text="COMPLETED" textFill="WHITE">
+                                                            <Label layoutY="12.0" text="UPCOMING" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="152.0" layoutY="12.0" text="\$50,000" textFill="WHITE">
+                                                            <Label layoutX="151.0" layoutY="12.0" text="\$600,000" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="280.0" layoutY="12.0" text="JAN 27-FEB 27" textFill="WHITE">
+                                                            <Label layoutX="285.0" layoutY="12.0" text="SEP 9-SEP 19" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
@@ -1271,7 +1271,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="1483.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="1540.0" prefHeight="170.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="champions-pane" animated="false" expanded="false" minWidth="-Infinity" prefHeight="256.0" prefWidth="649.0">
+                                          <TitledPane id="champions-pane" expanded="false" minWidth="-Infinity" prefHeight="256.0" prefWidth="649.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="721.0">
                                                    <children>
@@ -1302,7 +1302,7 @@
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>
                                                             </Label>
-                                                            <Label layoutX="293.0" layoutY="12.0" text="DEC 2021" textFill="WHITE">
+                                                            <Label layoutX="280.0" layoutY="12.0" text="NOV 29-DEC 12" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold Italic" size="10.0" />
                                                                </font>

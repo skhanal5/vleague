@@ -1,0 +1,56 @@
+.pane{
+	-fx-background-color: #FFFFFF;
+}
+
+.settings-panels:hover{
+	-fx-background-color:rgba(0,0,0,.1);
+	-fx-cursor:hand;
+}
+
+.audio-settings:hover{
+	-fx-background-color:rgba(0,0,0,.1);
+}
+
+.audio-sliders>.thumb{
+	-fx-background-color: #989898;
+}
+
+.audio-sliders > .colored-track {
+     -fx-background-color: #fa4554;
+}
+
+.audio-sliders > .track {
+     -fx-background-color: #949494;
+}
+
+.audio-sliders > .animated-thumb {
+     -fx-background-color: #fa4554;
+}
+
+.light-switch-icons:hover{
+	-fx-cursor:hand;
+}
+
+.icon-color{
+	 -fx-icon-color: #000000;
+}
+
+.sign-up-close{
+	 -fx-icon-color: #000000;
+}
+
+
+.sign-up-close:hover{
+	-fx-cursor:hand;
+}
+
+.label{
+	 -fx-text-fill: #000000;
+}
+
+.circle{
+	-fx-stroke: rgba(255,255,255,.85);
+	-fx-stroke-dash-array: 170px;
+	-fx-stroke-width:5;
+	-fx-fill:transparent;
+}

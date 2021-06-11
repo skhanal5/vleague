@@ -15,9 +15,11 @@ import javafx.beans.Observable;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.DialogPane;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -25,13 +27,13 @@ import javafx.util.Duration;
 public class SettingsController implements Initializable {
 	
 	@FXML
-	private DialogPane settingsPane;
+	private Pane settingsPane;
 	
 	@FXML
-	private DialogPane animationPane;
+	private Pane animationPane;
 	
 	@FXML
-	private DialogPane accountInfoPane;
+	private Pane accountInfoPane;
 	
 	@FXML
 	private Circle loadingCircle;
@@ -74,22 +76,45 @@ public class SettingsController implements Initializable {
 		
 		lightSwitch.selectedProperty().addListener(
 				(observable, oldValue, newValue) -> {
+					Parent curr = moonIcon.getScene().getRoot();
 					if (lightSwitch.isSelected()) {
+						curr.getStylesheets().set(0,getClass().getResource("darkmode.css").toExternalForm());
 						moonIcon.setDisable(false);
 						moonIcon.setVisible(true);
 						sunIcon.setDisable(true);
 						sunIcon.setVisible(false);
-					} else {
+					} else if(lightSwitch.isSelected()==false) {
 						sunIcon.setDisable(false);
 						sunIcon.setVisible(true);
 						moonIcon.setDisable(true);
 						moonIcon.setVisible(false);
+						curr.getStylesheets().set(0,getClass().getResource("lightmode.css").toExternalForm());
 					}
 				});
 	}
 	
 	public void setAccountInfo(String username) {
 		this.username.setText(username);
+	}
+	
+	public void setTheme(String username) {
+		Boolean colorValue = Main.database.getDarkOrLight(username);
+		Parent curr = moonIcon.getScene().getRoot();
+		if (colorValue==false) {
+			lightSwitch.setSelected(true);
+			curr.getStylesheets().set(0,getClass().getResource("darkmode.css").toExternalForm());
+			moonIcon.setDisable(false);
+			moonIcon.setVisible(true);
+			sunIcon.setDisable(true);
+			sunIcon.setVisible(false);
+		} else {
+			lightSwitch.setSelected(false);
+			curr.getStylesheets().set(0,getClass().getResource("lightmode.css").toExternalForm());
+			sunIcon.setDisable(false);
+			sunIcon.setVisible(true);
+			moonIcon.setDisable(true);
+			moonIcon.setVisible(false);
+		}
 	}
 	
 	//hides the settings pane and temporarily displays animation before switching to account information pane
@@ -140,6 +165,7 @@ public class SettingsController implements Initializable {
 	@FXML
 	private void closeSettingsWindow(MouseEvent event) {
 		Main.database.setVolume(username.getText(), musicSlider.getValue()/100, fxSlider.getValue()/100);
+		Main.database.setDarkLightMode(username.getText());
 		Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
 		s.close();
 	}
@@ -155,19 +181,19 @@ public class SettingsController implements Initializable {
 	//transitions user to GitHub read-me through default browser when the about us pane is selected
 	@FXML
 	private void aboutUsSelect(MouseEvent event) throws Exception {
-		 Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/vleague").toURI());
+		 Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/VLEAGUE/blob/main/README.md").toURI());
 	}
 	
 	//transitions user to GitHub read-me through default browser when the need help pane is selected
 	@FXML
 	private void needHelpSelect(MouseEvent event) throws Exception {
-		 Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/vleague").toURI());
+		 Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/VLEAGUE/blob/main/README.md").toURI());
 	}
 	
 	//transitions user to GitHub issues wiki page through default browser when the report issue pane is selected
 	@FXML
 	private void reportIssueSelect(MouseEvent event) throws Exception {
-		 Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/vleague").toURI());
+		 Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/VLEAGUE/issues/new").toURI());
 	}
 	
 	@FXML
