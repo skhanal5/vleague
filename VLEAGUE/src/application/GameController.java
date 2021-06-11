@@ -490,6 +490,7 @@ public class GameController implements Initializable{
 					if (scheduleTab.isSelected()) {
 						scheduleCircle.setFill(Color.web("#fa4454"));
 					} else {
+						scheduleScroll.setVvalue(0);
 						scheduleCircle.setFill(Color.web("#c7c7c7"));
 					}
 				});
@@ -830,13 +831,22 @@ public class GameController implements Initializable{
         leaderboardScroll.setVvalue(vvalue - deltaY/width); 
 	}
 	
-	//speeds up vertical scroll speed for the streaming scrollpane
+	//speeds up vertical scroll speed for the results scrollpane
 	@FXML
-	private void onStreamScrolling(ScrollEvent event) {
+	private void onResultsScrolling(ScrollEvent event) {
 		double deltaY = event.getDeltaY()*3;
         double width = resultsScroll.getContent().getBoundsInLocal().getWidth();
 		double vvalue = resultsScroll.getVvalue();
 		resultsScroll.setVvalue(vvalue - deltaY/width); 
+	}
+	
+	//speeds up vertical scroll speed for the schedule scrollpane
+	@FXML
+	private void onScheduleScrolling(ScrollEvent event) {
+		double deltaY = event.getDeltaY()*3;
+        double width = scheduleScroll.getContent().getBoundsInLocal().getWidth();
+		double vvalue = scheduleScroll.getVvalue();
+		scheduleScroll.setVvalue(vvalue - deltaY/width); 
 	}
 	
 	//will display the settings menu once clicked

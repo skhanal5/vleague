@@ -511,7 +511,7 @@
                      <children>
                         <ScrollPane fx:id="scheduleScroll" focusTraversable="false" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
                            <content>
-                              <AnchorPane prefHeight="1751.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
+                              <AnchorPane onScroll="#onScheduleScrolling" prefHeight="1751.0" prefWidth="1311.0" style="-fx-background-color: #0f1923;">
                                  <children>
                                     <ImageView fitHeight="1751.0" fitWidth="1311.0" layoutX="-6.0" layoutY="-6.0" opacity="0.05" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
@@ -1336,7 +1336,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="660.0" prefWidth="1003.0">
                      <children>
-                        <AnchorPane fx:id="resultDefaultScreen" prefHeight="662.0" prefWidth="1280.0" style="-fx-background-color: #0f1923;" visible="false">
+                        <AnchorPane fx:id="resultDefaultScreen" prefHeight="662.0" prefWidth="1280.0" style="-fx-background-color: #0f1923;">
                            <children>
                               <Label layoutX="505.0" layoutY="42.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
                               <Pane blendMode="OVERLAY" layoutX="291.0" layoutY="150.0" prefHeight="322.0" prefWidth="716.0" style="-fx-background-color: #0f1923;">
@@ -1367,9 +1367,9 @@
                               </Label>
                            </children>
                         </AnchorPane>
-                        <ScrollPane fx:id="resultsScroll" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS">
+                        <ScrollPane fx:id="resultsScroll" disable="true" hbarPolicy="NEVER" layoutX="-54.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="664.0" prefWidth="1337.0" vbarPolicy="ALWAYS" visible="false">
                            <content>
-                              <AnchorPane onScroll="#onStreamScrolling" prefHeight="975.0" prefWidth="1453.0" style="-fx-background-color: #0f1923;">
+                              <AnchorPane onScroll="#onResultsScrolling" prefHeight="975.0" prefWidth="1453.0" style="-fx-background-color: #0f1923;">
                                  <children>
                                     <ImageView fitHeight="1131.0" fitWidth="1748.0" layoutY="4.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>

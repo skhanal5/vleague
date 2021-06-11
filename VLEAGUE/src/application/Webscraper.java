@@ -113,7 +113,7 @@ public class Webscraper {
 		}
 		scanner.close();
 		
-		int matchesStart = pageContent.indexOf("<div class=\"wf-card mod-loss mod-dark\" style=\"margin-bottom: 25px;\">");
+		int matchesStart = pageContent.indexOf("<div style=\"display: flex; align-items: center; margin-bottom: 22px;\">");
 		int matchEnd = pageContent.indexOf("<div class=\"action-container\">");
 		String refined = pageContent.substring(matchesStart, matchEnd);
 		
@@ -146,7 +146,7 @@ public class Webscraper {
 		}
 		scanner.close();
 		
-		int matchesStart = pageContent.indexOf("<div class=\"wf-card mod-loss mod-dark\" style=\"margin-bottom: 25px;\">");
+		int matchesStart = pageContent.indexOf("<div style=\"display: flex; align-items: center; margin-bottom: 22px;\">");
 		int matchEnd = pageContent.indexOf("<div class=\"action-container\">");
 		String refined = pageContent.substring(matchesStart, matchEnd);
 		while(score.size()<10) {
@@ -178,12 +178,12 @@ public class Webscraper {
 		}
 		scanner.close();
 		
-		int matchesStart = pageContent.indexOf("<div class=\"wf-card mod-loss mod-dark\" style=\"margin-bottom: 25px;\">");
+		int matchesStart = pageContent.indexOf("<div style=\"display: flex; align-items: center; margin-bottom: 22px;\">");
 		int matchEnd = pageContent.indexOf("<div class=\"action-container\">");
 		String refined = pageContent.substring(matchesStart, matchEnd);
 		while(dates.size()<10) {
 			int indexStart = refined.indexOf("<div class=\"rm-item-date\">");
-			int indexEnd = refined.indexOf("</a>")+4;
+			int indexEnd = refined.indexOf("</div></a>")+10;
 			String dateInfo = refined.substring(indexStart, indexEnd);
 			String date = dateInfo.replace("<br>", "");
 			date = date.replace("<div class=\"rm-item-date\">", "");
