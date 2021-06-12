@@ -43,7 +43,7 @@ public class Database {
 		Boolean value = this.getDarkOrLight(user);
 		if (value==false) {
 			users.updateOne(Filters.in("username", user), Updates.set("dark-mode", true));
-		} else {
+		} else if (value==true) {
 			users.updateOne(Filters.in("username", user), Updates.set("dark-mode", false));
 		}
 	}

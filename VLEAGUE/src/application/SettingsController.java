@@ -62,6 +62,8 @@ public class SettingsController implements Initializable {
 	@FXML
 	private FontIcon moonIcon;
 	
+	private boolean init;
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		musicSlider.setValue(GameController.bgMusic.getVolume() * 100);
@@ -77,19 +79,23 @@ public class SettingsController implements Initializable {
 		lightSwitch.selectedProperty().addListener(
 				(observable, oldValue, newValue) -> {
 					Parent curr = moonIcon.getScene().getRoot();
-					if (lightSwitch.isSelected()) {
-						curr.getStylesheets().set(0,getClass().getResource("darkmode.css").toExternalForm());
-						moonIcon.setDisable(false);
-						moonIcon.setVisible(true);
-						sunIcon.setDisable(true);
-						sunIcon.setVisible(false);
-					} else if(lightSwitch.isSelected()==false) {
-						sunIcon.setDisable(false);
-						sunIcon.setVisible(true);
-						moonIcon.setDisable(true);
-						moonIcon.setVisible(false);
-						curr.getStylesheets().set(0,getClass().getResource("lightmode.css").toExternalForm());
+						
+					if (init==false) {
+						Main.database.setDarkLightMode(username.getText());
 					}
+						if (lightSwitch.isSelected()) {
+							curr.getStylesheets().set(0,getClass().getResource("darkmode.css").toExternalForm());
+							moonIcon.setDisable(false);
+							moonIcon.setVisible(true);
+							sunIcon.setDisable(true);
+							sunIcon.setVisible(false);
+						} else if(lightSwitch.isSelected()==false) {
+							sunIcon.setDisable(false);
+							sunIcon.setVisible(true);
+							moonIcon.setDisable(true);
+							moonIcon.setVisible(false);
+							curr.getStylesheets().set(0,getClass().getResource("lightmode.css").toExternalForm());
+						}
 				});
 	}
 	
@@ -98,23 +104,14 @@ public class SettingsController implements Initializable {
 	}
 	
 	public void setTheme(String username) {
+		init = true;
 		Boolean colorValue = Main.database.getDarkOrLight(username);
-		Parent curr = moonIcon.getScene().getRoot();
 		if (colorValue==false) {
-			lightSwitch.setSelected(true);
-			curr.getStylesheets().set(0,getClass().getResource("darkmode.css").toExternalForm());
-			moonIcon.setDisable(false);
-			moonIcon.setVisible(true);
-			sunIcon.setDisable(true);
-			sunIcon.setVisible(false);
-		} else {
 			lightSwitch.setSelected(false);
-			curr.getStylesheets().set(0,getClass().getResource("lightmode.css").toExternalForm());
-			sunIcon.setDisable(false);
-			sunIcon.setVisible(true);
-			moonIcon.setDisable(true);
-			moonIcon.setVisible(false);
+		} else {
+			lightSwitch.setSelected(true);
 		}
+		init = false;
 	}
 	
 	//hides the settings pane and temporarily displays animation before switching to account information pane
@@ -164,8 +161,7 @@ public class SettingsController implements Initializable {
 	//closes this dialog box window when the "back" arrow on the settings pane is selected
 	@FXML
 	private void closeSettingsWindow(MouseEvent event) {
-		Main.database.setVolume(username.getText(), musicSlider.getValue()/100, fxSlider.getValue()/100);
-		Main.database.setDarkLightMode(username.getText());
+		Main.database.setVolume(username.getText(), musicSlider.getValue()/100, fxSlider.getValue()/100);;
 		Stage s = (Stage)((Node)event.getSource()).getScene().getWindow();
 		s.close();
 	}
@@ -197,12 +193,12 @@ public class SettingsController implements Initializable {
 	}
 	
 	@FXML
-	private void onSunIconClick(MouseEvent event) {
+	private void onSunIconSelect(MouseEvent event) {
 		lightSwitch.setSelected(true);
 	}
 	
 	@FXML
-	private void onMoonIconClick(MouseEvent event) {
+	private void onMoonIconSelect(MouseEvent event) {
 		lightSwitch.setSelected(false);
 	}
 }
