@@ -2,8 +2,6 @@
   <img width="500px" src="https://user-images.githubusercontent.com/74752121/107126680-38528700-687f-11eb-8a01-d58fd41c4eb2.png">
 </p>
 
-# VLEAGUE
-
 ![license](https://img.shields.io/github/license/skhanal5/vleague)
 ![commit](https://img.shields.io/github/last-commit/skhanal5/vleague)
 ![issues](https://img.shields.io/github/issues/skhanal5/vleague)
