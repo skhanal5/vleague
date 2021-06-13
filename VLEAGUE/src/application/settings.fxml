@@ -36,7 +36,7 @@
             </Label>
             <VBox layoutX="37.0" layoutY="111.0" prefHeight="39.0" prefWidth="341.0">
                <children>
-                  <Pane onMouseClicked="#onAccountInfoSelect" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseClicked="#onAccountInfoSelect" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <Label layoutX="55.0" layoutY="11.0" text="Account Information">
                            <font>
@@ -51,7 +51,7 @@
             </VBox>
             <VBox layoutX="36.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="341.0">
                <children>
-                  <Pane prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <Label layoutX="55.0" layoutY="11.0" text="Music Volume">
                            <font>
@@ -62,7 +62,7 @@
                         <JFXSlider fx:id="musicSlider" blockIncrement="1.0" layoutX="187.0" layoutY="12.0" styleClass="audio-sliders" value="100.0" />
                      </children>
                   </Pane>
-                  <Pane prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <Label layoutX="55.0" layoutY="11.0" text="Sound FX">
                            <font>
@@ -77,7 +77,7 @@
             </VBox>
             <VBox layoutX="36.0" layoutY="281.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="161.0" prefWidth="341.0">
                <children>
-                  <Pane onMouseClicked="#aboutUsSelect" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseClicked="#aboutUsSelect" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <Label layoutX="55.0" layoutY="11.0" text="About us">
                            <font>
@@ -87,7 +87,7 @@
                         <FontIcon iconLiteral="fa-info-circle" iconSize="16" layoutX="18.0" layoutY="26.0" styleClass="icon-color" />
                      </children>
                   </Pane>
-                  <Pane onMouseClicked="#reportIssueSelect" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseClicked="#reportIssueSelect" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <Label layoutX="55.0" layoutY="11.0" text="Report an issue">
                            <font>
@@ -97,7 +97,7 @@
                         <FontIcon iconLiteral="fa-exclamation-circle" iconSize="16" layoutX="18.0" layoutY="26.0" styleClass="icon-color" />
                      </children>
                   </Pane>
-                  <Pane onMouseClicked="#needHelpSelect" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseClicked="#needHelpSelect" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <FontIcon iconLiteral="fa-sign-out" iconSize="16" layoutX="18.0" layoutY="26.0" styleClass="icon-color" text="" />
                         <Label layoutX="55.0" layoutY="11.0" text="Need help?">
@@ -107,7 +107,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane onMouseClicked="#leaveGameSelect" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
+                  <Pane onMouseClicked="#leaveGameSelect" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="settings-panels">
                      <children>
                         <Label layoutX="55.0" layoutY="11.0" text="Leave game">
                            <font>
@@ -126,14 +126,14 @@
             </JFXToggleButton>
             <FontIcon fx:id="sunIcon" iconLiteral="fa-sun-o" iconSize="12" layoutX="173.0" layoutY="459.0" onMouseClicked="#onSunIconSelect" styleClass="light-switch-icons" />
             <FontIcon fx:id="moonIcon" disable="true" iconColor="WHITE" iconLiteral="fa-moon-o" iconSize="12" layoutX="195.0" layoutY="459.0" onMouseClicked="#onMoonIconSelect" styleClass="light-switch-icons" visible="false" />
-            <FontIcon iconLiteral="fa-close" iconSize="16" layoutX="24.0" layoutY="44.0" onMouseClicked="#closeSettingsWindow" styleClass="sign-up-close" text="" />
+            <FontIcon iconLiteral="fa-close" iconSize="16" layoutX="24.0" layoutY="44.0" onMouseClicked="#closeSettingsWindow" onMouseEntered="#onNodeHover" styleClass="sign-up-close" text="" />
          </children>
       </Pane>
       <Pane fx:id="accountInfoPane" disable="true" layoutX="7.0" layoutY="5.0" prefHeight="491.0" prefWidth="387.0" styleClass="pane" visible="false">
          <children>
             <VBox layoutX="36.0" layoutY="98.0" prefHeight="296.0" prefWidth="341.0" spacing="5.0">
                <children>
-                  <Pane prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
+                  <Pane onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
                      <children>
                         <Label layoutX="7.0" text="Username" textFill="#00000080">
                            <font>
@@ -147,7 +147,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
+                  <Pane layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
                      <children>
                         <Label layoutX="7.0" text="Email Address" textFill="#00000080">
                            <font>
@@ -161,7 +161,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="10.0" layoutY="65.0" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
+                  <Pane layoutX="10.0" layoutY="65.0" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
                      <children>
                         <Label layoutX="7.0" text="Password" textFill="#00000080">
                            <font>
@@ -175,7 +175,7 @@
                         </Label>
                      </children>
                   </Pane>
-                  <Pane layoutX="10.0" layoutY="120.0" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
+                  <Pane layoutX="10.0" layoutY="120.0" onMouseEntered="#onNodeHover" prefHeight="39.0" prefWidth="321.0" styleClass="audio-settings">
                      <children>
                         <Label layoutX="7.0" text="Account Created" textFill="#00000080">
                            <font>
@@ -191,7 +191,7 @@
                   </Pane>
                </children>
             </VBox>
-            <FontIcon iconLiteral="fa-close" iconSize="16" layoutX="22.0" layoutY="44.0" onMouseClicked="#onBackSelect" styleClass="sign-up-close" text="" />
+            <FontIcon iconLiteral="fa-close" iconSize="16" layoutX="22.0" layoutY="44.0" onMouseClicked="#onBackSelect" onMouseEntered="#onNodeHover" styleClass="sign-up-close" text="" />
             <Label layoutX="105.0" layoutY="25.0" text="Account Information">
                <font>
                   <Font name="System Bold" size="18.0" />

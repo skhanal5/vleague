@@ -57,7 +57,7 @@
                               <Image url="@../resources/VLEAGUE%20Assets/patch-notes-blur.png" />
                            </image>
                         </ImageView>
-                        <Pane fx:id="homePane1" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel">
+                        <Pane fx:id="homePane1" layoutX="956.0" layoutY="69.0" onMouseEntered="#onNodeHover" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel">
                            <children>
                               <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
@@ -86,7 +86,7 @@
                                  </font>
                               </Label>
                            </children></Pane>
-                        <Pane fx:id="homePane2" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel" visible="false">
+                        <Pane fx:id="homePane2" layoutX="956.0" layoutY="69.0" onMouseEntered="#onNodeHover" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel" visible="false">
                            <children>
                               <Pane layoutX="2.0" layoutY="272.0" prefHeight="27.0" prefWidth="251.0" style="-fx-background-color: rgba(0,0,0,.3);" />
                               <Rectangle fill="#ffffff26" height="4.0" layoutX="32.0" layoutY="283.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0">
@@ -116,7 +116,7 @@
                               </Label>
                            </children>
                         </Pane>
-                        <Pane fx:id="homePane3" layoutX="956.0" layoutY="69.0" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel" visible="false">
+                        <Pane fx:id="homePane3" layoutX="956.0" layoutY="69.0" onMouseEntered="#onNodeHover" prefHeight="301.0" prefWidth="255.0" styleClass="slideshow-panel" visible="false">
                            <children>
                               <ImageView fitHeight="270.0" fitWidth="251.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -146,7 +146,7 @@
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="956.0" layoutY="382.0" onMouseClicked="#onPatchNotesSelect" prefHeight="54.0" prefWidth="255.0" styleClass="patchnotes-panel">
+                        <Pane layoutX="956.0" layoutY="382.0" onMouseClicked="#onPatchNotesSelect" onMouseEntered="#onNodeHover" prefHeight="54.0" prefWidth="255.0" styleClass="patchnotes-panel">
                            <children>
                               <Label layoutX="59.0" layoutY="7.0" minHeight="-Infinity" minWidth="-Infinity" styleClass="patchnotes-label" text="PATCH NOTES" textFill="WHITE" />
                               <FontIcon iconColor="WHITE" iconLiteral="fa-chevron-right" layoutX="31.0" layoutY="31.0" />
@@ -404,7 +404,7 @@
                                     <ImageView fx:id="teamIconPreview" fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" />
                                  </graphic>
                               </Label>
-                              <Button id="lock-in-button" fx:id="lockIn" disable="true" layoutX="1308.0" layoutY="787.0" mnemonicParsing="false" onMouseClicked="#onLockInSelect" prefHeight="25.0" prefWidth="75.0" text="LOCK IN" textFill="WHITE" />
+                              <Button id="lock-in-button" fx:id="lockIn" disable="true" layoutX="1308.0" layoutY="787.0" mnemonicParsing="false" onMouseClicked="#onLockInSelect" onMouseEntered="#onNodeHover" prefHeight="25.0" prefWidth="75.0" text="LOCK IN" textFill="WHITE" />
                            </children>
                         </AnchorPane>
                         <AnchorPane fx:id="myTeamLoad" prefHeight="660.0" prefWidth="1280.0" visible="false">
@@ -428,77 +428,106 @@
                               <Label fx:id="myTeamHeader" alignment="CENTER" focusTraversable="false" layoutX="457.0" layoutY="94.0" prefHeight="70.0" prefWidth="367.0" styleClass="header-label" text="LUMINOSITY GAMING" textFill="WHITE" />
                               <HBox layoutX="120.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="1041.0" spacing="10.0">
                                  <children>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
+                                    <Pane fx:id="playerOnePane" onMouseClicked="#onPlayerPaneOneSelect" onMouseEntered="#onNodeHover" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
-                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
-                                          <Label fx:id="playerOneTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player One" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></Pane>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
-                                       <children>
-                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
-                                          <Label fx:id="playerTwoTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Two" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
-                                             </image>
-                                          </ImageView>
+                                          <Pane prefHeight="334.0" prefWidth="200.0" />
+                                          <Pane fx:id="backCoverOne" layoutY="-2.0">
+                                             <children>
+                                                <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="20.0" />
+                                                <Label fx:id="playerOneTitle" alignment="CENTER" layoutX="2.0" layoutY="308.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player One" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
                                        </children>
                                     </Pane>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
+                                    <Pane fx:id="playerTwoPane" onMouseClicked="#onPlayerPaneTwoSelect" onMouseEntered="#onNodeHover" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
-                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
-                                          <Label fx:id="playerThreeTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Three" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></Pane>
-                                    <Pane prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
+                                          <Pane prefHeight="334.0" prefWidth="200.0" />
+                                          <Pane fx:id="backCoverTwo" layoutY="-2.0">
+                                             <children>
+                                                <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="20.0" />
+                                                <Label fx:id="playerTwoTitle" alignment="CENTER" layoutX="2.0" layoutY="308.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Two" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="playerThreePane" onMouseClicked="#onPlayerPaneThreeSelect" onMouseEntered="#onNodeHover" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
-                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
-                                          <Label fx:id="playerFourTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Four" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></Pane>
-                                    <Pane layoutX="10.0" layoutY="10.0" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
+                                          <Pane prefHeight="334.0" prefWidth="200.0" />
+                                          <Pane fx:id="backCoverThree" layoutY="-2.0">
+                                             <children>
+                                                <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="20.0" />
+                                                <Label fx:id="playerThreeTitle" alignment="CENTER" layoutX="2.0" layoutY="308.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Three" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="playerFourPane" onMouseClicked="#onPlayerPaneFourSelect" onMouseEntered="#onNodeHover" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
                                        <children>
-                                          <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="24.0" />
-                                          <Label fx:id="playerFiveTitle" alignment="CENTER" layoutX="2.0" layoutY="306.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Five" textFill="WHITE">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                          </Label>
-                                          <ImageView fitHeight="343.0" fitWidth="480.0" layoutX="-140.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
-                                             </image>
-                                          </ImageView>
-                                       </children></Pane>
+                                          <Pane prefHeight="334.0" prefWidth="200.0" />
+                                          <Pane fx:id="backCoverFour" layoutY="-2.0">
+                                             <children>
+                                                <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="20.0" />
+                                                <Label fx:id="playerFourTitle" alignment="CENTER" layoutX="2.0" layoutY="308.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Four" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="playerFivePane" layoutX="10.0" layoutY="10.0" onMouseClicked="#onPlayerPaneFiveSelect" onMouseEntered="#onNodeHover" prefHeight="335.0" prefWidth="200.0" styleClass="player-pane">
+                                       <children>
+                                          <Pane prefHeight="334.0" prefWidth="200.0" />
+                                          <Pane fx:id="backCoverFive" layoutY="-2.0">
+                                             <children>
+                                                <FontIcon iconColor="#ffffff78" iconLiteral="fa-info-circle" iconSize="16" layoutX="175.0" layoutY="20.0" />
+                                                <Label fx:id="playerFiveTitle" alignment="CENTER" layoutX="2.0" layoutY="308.0" prefHeight="27.0" prefWidth="195.0" style="-fx-background-color: rgba(0,0,0,.2);" text="Player Five" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../resources/VLEAGUE%20Assets/game%20silhoutte/silhoutte%20one.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </Pane>
                                  </children>
                               </HBox>
                            </children></AnchorPane>
@@ -536,7 +565,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="174.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="232.0" prefHeight="313.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="schedule-pane-colored" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -593,7 +622,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -650,7 +679,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -707,7 +736,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -780,7 +809,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="611.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="668.0" prefHeight="313.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="schedule-pane-colored" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -838,7 +867,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -896,7 +925,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -954,7 +983,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1028,7 +1057,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="1047.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="1104.0" prefHeight="313.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="schedule-pane-colored" expanded="false" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1086,7 +1115,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1144,7 +1173,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane-colored" expanded="false" layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1202,7 +1231,7 @@
                                                 </Pane>
                                              </graphic>
                                           </TitledPane>
-                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" prefHeight="140.0" prefWidth="688.0">
+                                          <TitledPane id="schedule-pane" expanded="false" layoutX="10.0" layoutY="150.0" onMouseEntered="#onNodeHover" prefHeight="140.0" prefWidth="688.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="688.0">
                                                    <children>
@@ -1271,7 +1300,7 @@
                                     <Line endX="100.0" layoutX="938.0" layoutY="1483.0" startX="-145.0" stroke="#ffffff33" />
                                     <Accordion layoutX="351.0" layoutY="1540.0" prefHeight="170.0" prefWidth="688.0">
                                        <panes>
-                                          <TitledPane id="champions-pane" expanded="false" minWidth="-Infinity" prefHeight="256.0" prefWidth="649.0">
+                                          <TitledPane id="champions-pane" expanded="false" minWidth="-Infinity" onMouseEntered="#onNodeHover" prefHeight="256.0" prefWidth="649.0">
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="721.0">
                                                    <children>
@@ -1371,15 +1400,15 @@
                            <content>
                               <AnchorPane onScroll="#onResultsScrolling" prefHeight="975.0" prefWidth="1453.0" style="-fx-background-color: #0f1923;">
                                  <children>
-                                    <ImageView fitHeight="1131.0" fitWidth="1748.0" layoutY="4.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
+                                    <ImageView fitHeight="1131.0" fitWidth="1748.0" layoutX="-7.0" layoutY="-10.0" opacity="0.08" pickOnBounds="true" preserveRatio="true" styleClass="pagination">
                                        <image>
                                           <Image url="@../resources/VLEAGUE%20Assets/gradient%202.png" />
                                        </image>
                                     </ImageView>
                                     <Label layoutX="559.0" layoutY="45.0" styleClass="header-label" text="MATCH RESULTS" textFill="WHITE" />
-                                    <VBox layoutX="293.0" layoutY="150.0" spacing="0.5">
+                                    <VBox layoutX="293.0" layoutY="150.0" spacing="2.5">
                                        <children>
-                                          <Pane prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="26.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1404,7 +1433,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date1" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date1" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font></Text>
@@ -1414,7 +1443,7 @@
                                                    </font>
                                                 </Label>
                                              </children></Pane>
-                                          <Pane layoutX="10.0" layoutY="10.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1441,7 +1470,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date2" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date2" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1453,7 +1482,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="80.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="80.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1480,7 +1509,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date3" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date3" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1492,7 +1521,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="150.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="150.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1519,7 +1548,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date4" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date4" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1531,7 +1560,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="220.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="220.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1558,7 +1587,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date5" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date5" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1570,7 +1599,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="290.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="290.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1597,7 +1626,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date6" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date6" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1609,7 +1638,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="20.0" layoutY="230.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="20.0" layoutY="230.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1636,7 +1665,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date7" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date7" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1648,7 +1677,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="20.0" layoutY="300.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="20.0" layoutY="300.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1675,7 +1704,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date8" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date8" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1687,7 +1716,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="500.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="500.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1714,7 +1743,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date9" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date9" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1726,7 +1755,7 @@
                                                 </Label>
                                              </children>
                                           </Pane>
-                                          <Pane layoutX="10.0" layoutY="500.0" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
+                                          <Pane layoutX="10.0" layoutY="500.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="820.0" styleClass="results-pane">
                                              <children>
                                                 <Label layoutX="395.0" layoutY="27.0" text="VS" textFill="WHITE">
                                                    <font>
@@ -1753,7 +1782,7 @@
                                                       <Image url="@../resources/VLEAGUE%20Assets/team%20icons/vl-generic-logo.png" />
                                                    </image>
                                                 </ImageView>
-                                                <Text fx:id="date10" fill="#ffffff9c" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
+                                                <Text fx:id="date10" fill="#ffffff59" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME DATE" wrappingWidth="120.0">
                                                    <font>
                                                       <Font name="System Bold" size="13.0" />
                                                    </font>
@@ -1796,7 +1825,7 @@
                                        <children>
                                           <VBox alignment="TOP_CENTER" prefHeight="980.0" prefWidth="748.0">
                                              <children>
-                                                <Pane prefHeight="69.0" prefWidth="748.0" style="-fx-background-color: #fa4454; -fx-background-radius: 15 15 0 0; -fx-border-color: rgba(255,255,255,.1); -fx-border-radius: 15 15 0 0;" styleClass="profile-panels">
+                                                <Pane onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" style="-fx-background-color: #fa4454; -fx-background-radius: 15 15 0 0; -fx-border-color: rgba(255,255,255,.1); -fx-border-radius: 15 15 0 0;" styleClass="profile-panels">
                                                    <children>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -1823,7 +1852,7 @@
                                                       </FontIcon>
                                                    </children>
                                                 </Pane>
-                                                <Pane prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -1850,7 +1879,7 @@
                                                       </FontIcon>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="79.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="79.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="86.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -1877,7 +1906,7 @@
                                                       </FontIcon>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="148.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="148.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -1908,7 +1937,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="217.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="217.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -1970,7 +1999,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="355.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="355.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2001,7 +2030,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="424.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="424.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2032,7 +2061,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="493.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="493.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2063,7 +2092,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="562.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="562.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2094,7 +2123,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="631.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="631.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2125,7 +2154,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="700.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="700.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2156,7 +2185,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="712.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="712.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2187,7 +2216,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="718.0" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="718.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2218,7 +2247,7 @@
                                                       </Label>
                                                    </children>
                                                 </Pane>
-                                                <Pane layoutX="10.0" layoutY="858.0" prefHeight="69.0" prefWidth="748.0" style="-fx-background-radius: 0 0 15 15;" styleClass="profile-panels">
+                                                <Pane layoutX="10.0" layoutY="858.0" onMouseEntered="#onNodeHover" prefHeight="69.0" prefWidth="748.0" style="-fx-background-radius: 0 0 15 15;" styleClass="profile-panels">
                                                    <children>
                                                       <Label alignment="CENTER" layoutX="30.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="34.0" style="-fx-background-color: transparent; -fx-background-radius: 10 10 10 10; -fx-border-color: rgba(255,255,255,.2); -fx-border-radius: 10 10 10 10;">
                                                          <graphic>
@@ -2321,7 +2350,7 @@
                                        <children>
                                           <HBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="1000.0">
                                              <children>
-                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 2 0 0 2;" styleClass="profile-panels">
+                                                <Pane onMouseEntered="#onNodeHover" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 2 0 0 2;" styleClass="profile-panels">
                                                    <children>
                                                       <Label layoutX="48.0" layoutY="40.0" text="Matches Played" textFill="WHITE">
                                                          <font>
@@ -2336,7 +2365,7 @@
                                                    </children>
                                                 </Pane>
                                                 <Line endX="7.0" endY="109.5" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
-                                                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
+                                                <Pane onMouseEntered="#onNodeHover" prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label layoutX="66.0" layoutY="40.0" text="VP Earned" textFill="WHITE">
                                                          <font>
@@ -2351,7 +2380,7 @@
                                                    </children>
                                                 </Pane>
                                                 <Line endX="7.0" endY="109.5" layoutX="803.0" layoutY="33.0" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
-                                                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
+                                                <Pane onMouseEntered="#onNodeHover" prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label layoutX="60.0" layoutY="40.0" text="Global Rank" textFill="WHITE">
                                                          <font>
@@ -2366,7 +2395,7 @@
                                                    </children>
                                                 </Pane>
                                                 <Line endX="7.0" endY="109.5" layoutX="404.0" layoutY="33.0" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
-                                                <Pane prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
+                                                <Pane onMouseEntered="#onNodeHover" prefHeight="200.0" prefWidth="200.0" styleClass="profile-panels">
                                                    <children>
                                                       <Label layoutX="49.0" layoutY="40.0" text="Top 15 Finishes" textFill="WHITE">
                                                          <font>
@@ -2381,7 +2410,7 @@
                                                    </children>
                                                 </Pane>
                                                 <Line endX="7.0" endY="109.5" layoutX="604.0" layoutY="49.0" opacity="0.15" startX="7.0" startY="14.0" stroke="WHITE" strokeWidth="0.5" />
-                                                <Pane layoutX="810.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0 2 2 0;" styleClass="profile-panels">
+                                                <Pane layoutX="810.0" layoutY="10.0" onMouseEntered="#onNodeHover" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 0 2 2 0;" styleClass="profile-panels">
                                                    <children>
                                                       <Label layoutX="53.0" layoutY="40.0" text="Favorite Team" textFill="WHITE">
                                                          <font>
@@ -2461,7 +2490,7 @@
                                     </Label>
                                  </children>
                               </Pane>
-                              <Pane fx:id="profilePicPane" layoutX="490.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="300.0" styleClass="profile-panels">
+                              <Pane fx:id="profilePicPane" layoutX="490.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onNodeHover" prefHeight="235.0" prefWidth="300.0" styleClass="profile-panels">
                                  <children>
                                     <ImageView fx:id="largeUserIcon" fitHeight="389.0" fitWidth="335.0" layoutX="-17.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
                                        <image>
@@ -2478,7 +2507,7 @@
                         </AnchorPane>
                         <AnchorPane fx:id="profileSelectScreen" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="1280.0" visible="false">
                            <children>
-                              <Pane layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="273.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to top, #f3606d,  #fa4454);">
+                              <Pane layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#onNodeHover" prefHeight="273.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to top, #f3606d,  #fa4454);">
                                  <children>
                                     <Label layoutX="50.0" layoutY="14.0" onMouseClicked="#onBackArrowSelect" styleClass="profile-back-text" text="BACK" textFill="WHITE">
                                        <font>
@@ -2494,7 +2523,7 @@
                                        <content>
                                           <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="178.0" prefWidth="2559.0" style="-fx-background-color: #17212d;">
                                              <children>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onViperLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onViperLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2503,7 +2532,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onBrimLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onBrimLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2512,7 +2541,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCypherLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onCypherLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2521,7 +2550,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onKillJoyLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onKillJoyLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2530,7 +2559,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onPhoenixLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onPhoenixLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2539,7 +2568,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onRazeLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onRazeLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2548,7 +2577,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onJettLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onJettLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="198.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2557,7 +2586,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onReynaLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onReynaLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2566,7 +2595,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSovaLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSovaLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2575,7 +2604,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSkyeLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSkyeLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2584,7 +2613,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSageLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onSageLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2593,7 +2622,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onOmenLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onOmenLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2602,7 +2631,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onYoruLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onYoruLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2611,7 +2640,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onBreachLabelSelect" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
+                                                <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onBreachLabelSelect" onMouseEntered="#onNodeHover" prefHeight="178.0" prefWidth="183.0" styleClass="profile-panels">
                                                    <graphic>
                                                       <ImageView fitHeight="187.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true">
                                                          <image>
@@ -2627,7 +2656,7 @@
                                           <DropShadow color="#0000006b" height="19.27" offsetY="3.0" radius="4.3175" width="0.0" />
                                        </effect>
                                     </ScrollPane>
-                                    <Button id="lock-in-button" fx:id="equipIcon" layoutX="1068.0" layoutY="106.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="EQUIP" textFill="WHITE" />
+                                    <Button id="lock-in-button" fx:id="equipIcon" layoutX="1068.0" layoutY="106.0" mnemonicParsing="false" onMouseEntered="#onNodeHover" prefHeight="25.0" prefWidth="75.0" text="EQUIP" textFill="WHITE" />
                                  </children></Pane>
                               <Pane layoutX="490.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="300.0">
                                  <children>
@@ -2709,7 +2738,7 @@
                   <DropShadow />
                </effect>
             </Label>
-            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onGearSelect" prefHeight="59.0" prefWidth="60.0" styleClass="sign-in-top-button">
+            <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onGearSelect" onMouseEntered="#onNodeHover" prefHeight="59.0" prefWidth="60.0" styleClass="sign-in-top-button">
                <graphic>
                   <FontIcon iconColor="#c7c7c7" iconLiteral="fa-gear" iconSize="16">
                      <effect>

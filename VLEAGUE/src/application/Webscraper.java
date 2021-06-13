@@ -28,7 +28,7 @@ public class Webscraper {
 			formattedName = "Team Solomid";
 		} else if (teamName.equals("100 THIEVES")) {
 			hyperlink = "https://www.vlr.gg/team/matches/120/100-thieves/?group=completed";
-			imageLink = "/resources/VLEAGUE Assets/team icons/100tlogo.png";
+			imageLink = "/resources/VLEAGUE Assets/team icons/100t-logo.png";
 			formattedName = "100 Thieves";
 		} else if (teamName.equals("CLOUD 9")) {
 			hyperlink = "https://www.vlr.gg/team/matches/188/cloud9-blue/?group=completed";

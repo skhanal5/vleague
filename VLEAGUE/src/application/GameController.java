@@ -6,7 +6,11 @@ import java.util.ResourceBundle;
 
 import org.kordamp.ikonli.javafx.FontIcon;
 
+import javafx.animation.Animation;
+import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.ParallelTransition;
 import javafx.animation.RotateTransition;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
@@ -15,6 +19,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -28,11 +33,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
+import javafx.scene.transform.Rotate;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -402,6 +409,36 @@ public class GameController implements Initializable{
 	private Pane profilePicPane;
 	
 	@FXML
+	private Pane playerOnePane;
+	
+	@FXML
+	private Pane playerTwoPane;
+	
+	@FXML
+	private Pane playerThreePane;
+	
+	@FXML
+	private Pane playerFourPane;
+	
+	@FXML
+	private Pane playerFivePane;
+	
+	@FXML
+	private Pane backCoverOne;
+	
+	@FXML
+	private Pane backCoverTwo;
+	
+	@FXML
+	private Pane backCoverThree;
+	
+	@FXML
+	private Pane backCoverFour;
+	
+	@FXML
+	private Pane backCoverFive;
+	
+	@FXML
 	private AnchorPane profileScreen;
 	
 	@FXML
@@ -446,8 +483,19 @@ public class GameController implements Initializable{
 	
 	private int pos = 0;
 	
+	private boolean isOneFlipped;
+	
+	private boolean isTwoFlipped;
+	
+	private boolean isThreeFlipped;
+	
+	private boolean isFourFlipped;
+	
+	private boolean isFiveFlipped;
+	
 	public static MediaPlayer bgMusic;
-
+	
+	public static AudioClip clip;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		homeSlideshow();
@@ -584,6 +632,8 @@ public class GameController implements Initializable{
 			   });
 			bgMusic.play();
 			bgMusic.setVolume(Main.database.getMusicVolume(user));
+			clip = new AudioClip(getClass().getResource("/resources/Menu-Selection-Change-C-www.fesliyanstudios.com.mp3").toExternalForm());
+			clip.setVolume(Main.database.getFXVolume(user));
 		} catch (Exception e){
 			e.printStackTrace();
 		}
@@ -879,7 +929,7 @@ public class GameController implements Initializable{
 	//redirects users to github page
 	@FXML
 	private void onPatchNotesSelect(MouseEvent event) throws Exception {
-		Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/vleague").toURI());
+		Desktop.getDesktop().browse(new URL("https://github.com/skhanal5/VLEAGUE/commits/main").toURI());
 	}
 	
 	//shows pane with profile icons
@@ -1132,5 +1182,84 @@ public class GameController implements Initializable{
 	private void onLockInSelect(MouseEvent event) {
 		Main.database.setTeam(username.getText(), true, teamNameLabel.getText());
 		myTeamLoad();
+	}
+	
+	@FXML
+	private void onPlayerPaneOneSelect(MouseEvent event) {
+		Animation rotator = createRotation(playerOnePane, backCoverOne, isOneFlipped);
+		rotator.play();
+		if (isOneFlipped==true) {
+			isOneFlipped=false;
+		} else {
+			isOneFlipped=true; 
+		}
+	}
+	
+	@FXML
+	private void onPlayerPaneTwoSelect(MouseEvent event) {
+		Animation rotator = createRotation(playerTwoPane, backCoverTwo, isTwoFlipped);
+		rotator.play();
+		if (isTwoFlipped==true) {
+			isTwoFlipped=false;
+		} else {
+			isTwoFlipped=true; 
+		}
+	}
+	
+	@FXML
+	private void onPlayerPaneThreeSelect(MouseEvent event) {
+		Animation rotator = createRotation(playerThreePane, backCoverThree, isThreeFlipped);
+		rotator.play();
+		if (isThreeFlipped==true) {
+			isThreeFlipped=false;
+		} else {
+			isThreeFlipped=true; 
+		}
+	}
+	
+	@FXML
+	private void onPlayerPaneFourSelect(MouseEvent event) {
+		Animation rotator = createRotation(playerFourPane, backCoverFour, isFourFlipped);
+		rotator.play();
+		if (isFourFlipped==true) {
+			isFourFlipped=false;
+		} else {
+			isFourFlipped=true; 
+		}
+	}
+	
+	@FXML
+	private void onPlayerPaneFiveSelect(MouseEvent event) {
+		Animation rotator = createRotation(playerFivePane, backCoverFive, isFiveFlipped);
+		rotator.play();
+		if (isFiveFlipped==true) {
+			isFiveFlipped=false;
+		} else {
+			isFiveFlipped=true; 
+		}
+	}
+	
+	private Animation createRotation(Node curr, Node cover, Boolean check) {
+		RotateTransition rotator = new RotateTransition(Duration.millis(1000), curr);
+		rotator.setAxis(Rotate.Y_AXIS);
+		Timeline paneSwitcher = null;
+		if(check==false) {
+			rotator.setFromAngle(0);
+			rotator.setToAngle(180);
+			paneSwitcher = new Timeline(new KeyFrame(Duration.millis(250), new KeyValue(cover.visibleProperty(),false,Interpolator.DISCRETE)));
+		} else {
+			rotator.setFromAngle(180);
+			rotator.setToAngle(360);
+			rotator.setInterpolator(Interpolator.LINEAR);
+			paneSwitcher = new Timeline(new KeyFrame(Duration.millis(250), new KeyValue(cover.visibleProperty(),true,Interpolator.DISCRETE)));
+		}
+		rotator.setInterpolator(Interpolator.LINEAR);
+		rotator.setCycleCount(1);
+		return new ParallelTransition(curr,rotator, paneSwitcher);
+	}
+	
+	@FXML
+	private void onNodeHover(MouseEvent event) {
+		clip.play();
 	}
 }

@@ -76,6 +76,16 @@ public class SettingsController implements Initializable {
 			
 		});
 		
+		fxSlider.setValue(GameController.clip.getVolume() * 100);
+		fxSlider.valueProperty().addListener(new InvalidationListener() {
+			
+			@Override
+			public void invalidated(Observable observable) {
+				GameController.clip.setVolume(fxSlider.getValue()/100);
+			}
+			
+		});
+		
 		lightSwitch.selectedProperty().addListener(
 				(observable, oldValue, newValue) -> {
 					Parent curr = moonIcon.getScene().getRoot();
@@ -200,5 +210,10 @@ public class SettingsController implements Initializable {
 	@FXML
 	private void onMoonIconSelect(MouseEvent event) {
 		lightSwitch.setSelected(false);
+	}
+	
+	@FXML
+	private void onNodeHover(MouseEvent event) {
+		GameController.clip.play();
 	}
 }
