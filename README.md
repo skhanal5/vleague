@@ -2,12 +2,18 @@
   <img width="500px" src="https://user-images.githubusercontent.com/74752121/107126680-38528700-687f-11eb-8a01-d58fd41c4eb2.png">
 </p>
 
-![license](https://img.shields.io/github/license/skhanal5/vleague)
-![commit](https://img.shields.io/github/last-commit/skhanal5/vleague)
-![issues](https://img.shields.io/github/issues/skhanal5/vleague)
-![stars](https://img.shields.io/github/stars/skhanal5/vleague?style=social)
+<div align="center">
+  
+  <a href="">![license](https://img.shields.io/github/license/skhanal5/vleague)</a>
+  <a href="">![commit](https://img.shields.io/github/last-commit/skhanal5/vleague)</a>
+  <a href="">![issues](https://img.shields.io/github/issues/skhanal5/vleague)</a>
+  <a href="">![stars](https://img.shields.io/github/stars/skhanal5/vleague?style=social)</a>
+  
+</div>
 
-A JavaFX GUI design concept for a pick'em simulator based on the first-person shooter game VALORANT 
+<p align="center">
+  A JavaFX GUI design concept for a pick'em simulator based on the first-person shooter game VALORANT 
+</p>
 
 ## Disclaimer
 
